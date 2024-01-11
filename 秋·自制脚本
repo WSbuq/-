@@ -547,6 +547,7 @@ Tab:AddButton({
   Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/raw/07P53fFE"))()
   end
+})
   local Section = Tab:AddSection({
   Name = "随便乱找的，不确定能不能用"
   })
