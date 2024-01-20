@@ -42,8 +42,8 @@ CoreGui:SetCore("SendNotification", {
 wait(0.1)
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "在此特别感谢波奇塔",
-  Text = "如果不是他我可能都没法找到我的源码",
+  Title = "在此特别感谢波奇塔(Q:1627164225)",
+  Text = "如果不是他我可能都没法找到我的源码，可以去试试他的脚本(在其他脚本菜单那)",
   Duration = 5,
 })
 wait(0.1)
@@ -537,7 +537,7 @@ Tab:AddButton({
   end
 })
 Tab:AddButton({
-  Name = "MSDOORS2.4(纯英文)",
+  Name = "MSDOORS2.4(纯英文)(貌似要白名单)",
   Callback = function()
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSHUB_Loader.lua"),true))()
   end
@@ -955,12 +955,6 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-
-
-local Section = Tab:AddSection({
-  Name = "功能"
-})
-
 local Section = Tab:AddSection({
   Name = "传送岛屿"
 })
@@ -1079,15 +1073,22 @@ Tab:AddButton({
   end
 })
 local Tab = Window:MakeTab({
-  Name = "脚本集(部分会覆盖)",
+  Name = "其他脚本菜单(部分会覆盖)",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
 
 Tab:AddButton({
-  Name = "波奇塔自制脚本中心",
+  Name = "波奇塔自制脚本中心(要找这个脚本的作者搞白名单）(免费)",
   Callback = function()
     _G["波奇搭小脚本中心，已经修复"]="xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey"loadstring(game:HttpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,112,97,115,116,101,98,105,110,46,99,111,109,47,114,97,119,47,68,80,121,113,72,53,54,77})end)())))()
+  end
+})
+Tab:AddButton({
+  Name = "复制该脚本作者QQ号和群号",
+  Callback = function()
+    setclipboard("Q号:1627164225 群:154058247")
+
   end
 })
 Tab:AddButton({
@@ -1097,7 +1098,13 @@ Tab:AddButton({
       end
     })
 Tab:AddButton({
-  Name = "ato",
+  Name = "复制该脚本作者QQ号(能不能买到看你自己)",
+  Callback = function()
+    setclipboard("1790789616")
+  end
+})
+Tab:AddButton({
+  Name = "ato(没卡密和白名单)",
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/atoyayaya/jiaoben/main/jiamilist"))()
   end
@@ -1112,14 +1119,14 @@ Tab:AddButton({
 
 
 Tab:AddButton({
-  Name = "脚本中心",
+  Name = "脚本中心(没卡密和白名单)",
   Callback = function()
     loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\103\101\109\120\72\119\65\49"))()
   end
 })
 
 local Tab = Window:MakeTab({
-  Name = "DOORS娱乐十字架(只对自己召唤的怪有用)",
+  Name = "DOORS娱乐十字架",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
@@ -1134,7 +1141,7 @@ Tab:AddButton({
   end
 })
 Tab:AddButton({
-  Name = "SCreech十字架",
+  Name = "SCreech十字架(貌似没啥用)",
   Callback = function ()
     loadstring(game:HttpGet("https://pastebin.com/raw/W1AzELhb"))()
   end
