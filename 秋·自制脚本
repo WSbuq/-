@@ -113,7 +113,6 @@ Tab:AddParagraph("你好"..game.Players.LocalPlayer.Name..",欢迎使用秋·自
 Tab:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 Tab:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 Tab:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
-Tab:AddParagraph("您当前服务器的名"," "..game.GameName.."")
 Tab:AddParagraph("反挂机已启动","")
 Tab:AddButton({
   Name = "反挂机2",
