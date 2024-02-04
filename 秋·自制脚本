@@ -154,6 +154,13 @@ Tab:AddButton({
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
   end
 })
+
+Tab:AddButton({
+      Name = "刀刃球",
+      Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E5%88%80%E5%88%83%E7%90%83.lua"))()
+      end
+    })
 Tab:AddButton({
   Name = "目前最像白的伐木脚本",
   Callback = function()
