@@ -113,7 +113,9 @@ Tab:AddParagraph("你好"..game.Players.LocalPlayer.Name..",欢迎使用秋·自
 Tab:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 Tab:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 Tab:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
+
 Tab:AddParagraph("反挂机已启动","")
+
 Tab:AddButton({
   Name = "反挂机2",
   Callback = function()
@@ -140,80 +142,94 @@ Tab:AddButton({
     local gui = Instance.new('ScreenGui', game:service'CoreGui')local button = Instance.new('TextButton', gui)button.Size = UDim2.new(0, 200, 0, 100)button.Position = UDim2.new(.5, 0, .5, 0)button.Text = '点击蓝屏'button.MouseButton1Click:Connect(loadstring(game:HttpGet'https://github.com/RunDTM/roblox-bluescreen/raw/main/bsod.lua'))
   end
 })
+
 local Tab = Window:MakeTab({
   Name = "一些服务器的菜单",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
+
 local Section = Tab:AddSection({
   Name = "都是乱找的，作者也不确定能不能用"
   })
+
 Tab:AddButton({
   Name = "巴掌模拟器",
   Callback = function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
   end
 })
+
 Tab:AddButton({
       Name = "巴掌模拟器-2",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E5%B7%B4%E6%8E%8C%E5%A4%A7%E6%88%98.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "自然灾害模拟器",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E8%87%AA%E7%84%B6%E7%81%BE%E5%AE%B3.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "刀刃球",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E5%88%80%E5%88%83%E7%90%83.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "一路向西",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E4%B8%80%E8%B7%AF%E5%90%91%E8%A5%BF.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "OHIO",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E4%BF%84%E4%BA%A5%E4%BF%84%E5%B7%9E.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "法宝模拟器",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E6%B3%95%E5%AE%9D%E6%A8%A1%E6%8B%9F%E5%99%A8.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "造船寻宝",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E9%80%A0%E8%88%B9%E5%AF%BB%E5%AE%9D.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "蜂群模拟器",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E8%9C%82%E7%BE%A4%E6%A8%A1%E6%8B%9F%E5%99%A8.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "钓鱼模拟器",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E9%92%93%E9%B1%BC%E6%A8%A1%E6%8B%9F%E5%99%A8.lua"))()
       end
     })
+
 Tab:AddButton({
       Name = "餐厅大亨2",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E9%A4%90%E5%8E%85%E5%A4%A7%E4%BA%A82.lua"))()
       end
     })
+
 Tab:AddButton({
   Name = "目前最像白的伐木脚本",
   Callback = function()
