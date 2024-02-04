@@ -162,6 +162,12 @@ Tab:AddButton({
       end
     })
 Tab:AddButton({
+      Name = "一路向西",
+      Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E4%B8%80%E8%B7%AF%E5%90%91%E8%A5%BF.lua"))()
+      end
+    })
+Tab:AddButton({
   Name = "目前最像白的伐木脚本",
   Callback = function()
     loadstring(game:HttpGet('https://getexploits.com/key-system/',true))('https://da.com/936657404291084298/1006220505583460352/Script.txt')
