@@ -136,10 +136,11 @@ Tab:AddButton({
     setclipboard("599654873")
   end
 })
-Tab:AddButton({
-  Name = "娱乐蓝屏(点击之后会出来一个按钮，点击那个按钮才会蓝屏)(大退关闭)",
-  Callback = function()
-    local gui = Instance.new('ScreenGui', game:service'CoreGui')local button = Instance.new('TextButton', gui)button.Size = UDim2.new(0, 200, 0, 100)button.Position = UDim2.new(.5, 0, .5, 0)button.Text = '点击蓝屏'button.MouseButton1Click:Connect(loadstring(game:HttpGet'https://github.com/RunDTM/roblox-bluescreen/raw/main/bsod.lua'))
+Tab:AddToggle({
+  Name = "娱乐蓝屏(点击之后会出来一个按钮，点击那个按钮才会蓝屏)(大退关闭)"",
+  Default = false,
+  Callback = function(Value)
+    local gui = Instance.new('ScreenGui', game:service'CoreGui')local button = Instance.new('TextButton', gui)button.Size = UDim2.new(0, 200, 0, 100)button.Position = UDim2.new(.5, 0, .5, 0)button.Text = '点击蓝屏(可能会卡死)'button.MouseButton1Click:Connect(loadstring(game:HttpGet'https://github.com/RunDTM/roblox-bluescreen/raw/main/bsod.lua'))
   end
 })
 
@@ -278,13 +279,6 @@ Tab:AddToggle({
     end
   end
 })
-Tab:AddButton({
-  Name = "阿尔宙斯UI",
-  Default = false,
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
-  end
-})
 
 Tab:AddButton({
   Name = "指令挂(英文)（类似管理员，不过大部分功能只是表象）",
@@ -293,18 +287,22 @@ Tab:AddButton({
   end
 })
 
-Tab:AddButton({
-  Name = "调整碰撞箱(英文)",
-  Callback = function()
+Tab:AddToggle({
+  Name = "调整别人的伤害箱(UI)(英文)",
+  Default = false,
+  Callback = function(Value)
     loadstring(game:HttpGet("https://pastebin.com/raw/ZQMVNxkT"))()
   end
 })
-Tab:AddButton({
-  Name = "变小15r",
-  Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/XV8zfvD2"))()
+
+Tab:AddToggle({
+  Name = "修改别人的伤害箱(英文)",
+  Default = false,
+  Callback = function(Value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/0a7cG84K"))()
   end
 })
+
 Tab:AddButton({
   Name = "飞行V3(秋风拂过汉化)",
   Callback = function()
@@ -327,11 +325,21 @@ Tab:AddButton({
   end
 })
 
-Tab:AddParagraph("光影均无法关闭","只可叠加，但是效果很好")
+local Section = Tab:AddSection({
+  Name = "注:光影脚本，可单用也可叠加，效果都不一样"
+  })
 Tab:AddButton({
-  Name = "光影（滤镜）",
+  Name = "红色滤镜(点3次再点下面的会有夕阳的感觉)",
   Default = false,
   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
+  end
+})
+
+Tab:AddToggle({
+  Name = "红色滤镜(开关版)",
+  Default = false,
+  Callback = function(Value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
   end
 })
@@ -353,9 +361,35 @@ Tab:AddButton({
   end
 })
 
+Tab:AddToggle({
+  Name = "美丽天空(开关版)",
+  Default = false,
+  Callback = function(Value)
+    -- Roblox Graphics Enhancher
+    local light = game.Lighting
+    for i, v in pairs(light:GetChildren()) do
+      v:Destroy()
+    end
+
+    local ter = workspace.Terrain
+    local color = Instance.new("ColorCorrectionEffect")
+    local bloom = Instance.new("BloomEffect")
+    local sun = Instance.new("SunRaysEffect")
+    local blur = Inst
+  end
+})
+
 Tab:AddButton({
   Name = "超高画质",
   Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
+  end
+})
+
+Tab:AddToggle({
+  Name = "超高画质(开关版)",
+  Default = false,
+  Callback = function(Value)
     loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
   end
 })
@@ -367,12 +401,7 @@ Tab:AddButton({
   end
 })
 
-Tab:AddButton({
-  Name = "修改别人收到伤害的范围(英文)",
-  Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/0a7cG84K"))()
-  end
-})
+
 Tab:AddTextbox({
   Name = "移动速度",
   Default = "",
@@ -488,7 +517,7 @@ Tab:AddToggle({
     end
   end
 })
-Tab:AddButton({
+Tab:AddToggle({
   Name = "不会屏蔽的消息发送器(只有自己能看见)(娱乐)",
   Default = false,
   Callback = function(Value)
@@ -496,7 +525,7 @@ Tab:AddButton({
   end
 })
 Tab:AddButton({
-  Name = "回满血（部分服务器无效）（可能是假血））",
+  Name = "暂停回血(用假血填满血条)",
   Callback = function ()
     FullHealth = 10000000
     game.Players.LocalPlayer.Character.Humanoid.Health = FullHealth
@@ -516,7 +545,7 @@ Tab:AddButton({
   end
 })
 local Tab = Window:MakeTab({
-  Name = "仅DOORS可用脚本",
+  Name = "DOORS可用脚本",
   Icon = "rbxassetid://7734068321",
   PremiumOnly = false
 })
