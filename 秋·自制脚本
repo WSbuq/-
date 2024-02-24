@@ -137,7 +137,7 @@ Tab:AddButton({
   end
 })
 Tab:AddToggle({
-  Name = "娱乐蓝屏(点击之后会出来一个按钮，点击那个按钮才会蓝屏)(大退关闭)"",
+  Name = "娱乐蓝屏(点击之后会出来一个按钮，点击那个按钮才会蓝屏)(大退关闭)",
   Default = false,
   Callback = function(Value)
 if Value then
@@ -298,7 +298,8 @@ Tab:AddToggle({
 if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/ZQMVNxkT"))()
 else
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
+end
 end
 })
 
@@ -309,9 +310,11 @@ Tab:AddToggle({
 if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/0a7cG84K"))()
 else
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
+end
 end
 })
+
 Tab:AddToggle({
   Name = "穿墙",
   Default = false,
