@@ -94,7 +94,7 @@ end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/WS857960/-/main/QJBDUI.txt'))()
-local Window = OrionLib:MakeWindow({Name = "秋·自制脚本｜遗存抢救版｜2024.01.12", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
+local Window = OrionLib:MakeWindow({Name = "秋·自制脚本｜小更新｜2024.02.24", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
 OrionLib:MakeNotification({
   Name = "欢迎使用秋·自制脚本,作者QQ:539414413",
   Content = "当前游戏ID为:" .. game.GameId .. " ",
@@ -140,6 +140,7 @@ Tab:AddToggle({
   Name = "娱乐蓝屏(点击之后会出来一个按钮，点击那个按钮才会蓝屏)(大退关闭)"",
   Default = false,
   Callback = function(Value)
+if Value then
     local gui = Instance.new('ScreenGui', game:service'CoreGui')local button = Instance.new('TextButton', gui)button.Size = UDim2.new(0, 200, 0, 100)button.Position = UDim2.new(.5, 0, .5, 0)button.Text = '点击蓝屏(可能会卡死)'button.MouseButton1Click:Connect(loadstring(game:HttpGet'https://github.com/RunDTM/roblox-bluescreen/raw/main/bsod.lua'))
   end
 })
@@ -291,6 +292,7 @@ Tab:AddToggle({
   Name = "调整别人的伤害箱(UI)(英文)",
   Default = false,
   Callback = function(Value)
+if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/ZQMVNxkT"))()
   end
 })
@@ -299,7 +301,34 @@ Tab:AddToggle({
   Name = "修改别人的伤害箱(英文)",
   Default = false,
   Callback = function(Value)
+if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/0a7cG84K"))()
+  end
+})
+Tab:AddToggle({
+  Name = "穿墙",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      Noclip = true
+      Stepped = game.RunService.Stepped:Connect(function()
+        if Noclip == true then
+          for a, b in pairs(game.Workspace:GetChildren()) do
+            if b.Name == game.Players.LocalPlayer.Name then
+              for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+                if v:IsA("BasePart") then
+                  v.CanCollide = false
+                end
+              end
+            end
+          end
+         else
+          Stepped:Disconnect()
+        end
+      end)
+     else
+      Noclip = false
+    end
   end
 })
 
@@ -340,6 +369,7 @@ Tab:AddToggle({
   Name = "红色滤镜(开关版)",
   Default = false,
   Callback = function(Value)
+if Value then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
   end
 })
@@ -365,6 +395,7 @@ Tab:AddToggle({
   Name = "美丽天空(开关版)",
   Default = false,
   Callback = function(Value)
+if Value then
     -- Roblox Graphics Enhancher
     local light = game.Lighting
     for i, v in pairs(light:GetChildren()) do
@@ -390,6 +421,7 @@ Tab:AddToggle({
   Name = "超高画质(开关版)",
   Default = false,
   Callback = function(Value)
+if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
   end
 })
@@ -432,9 +464,11 @@ Tab:AddButton({
   end
 })
 
-Tab:AddButton({
-  Name = "《掉头》(头会停在原地，无法复活)",
-  Callback = function()
+Tab:AddToggle({
+  Name = "《掉头》(头会停在地，无法复活)",
+  Default = false,
+  Callback = function(Value)
+  if Value then
     local lp = game:GetService "Players".LocalPlayer
     if lp.Character:FindFirstChild "Head" then
       local char = lp.Character
@@ -471,9 +505,11 @@ Tab:AddButton({
   end
 })
 
-Tab:AddButton({
-  Name = "跑墙(视角可能会有点怪)",
-  Callback = function()
+Tab:AddToggle({
+  Name = "跑墙《失败的man》(可以在强上走和跳)(视角可能会有点怪)",
+  Default = false,
+  Callback = function(Value)
+  if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
   end
 })
@@ -491,39 +527,16 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()
   end
 })
-Tab:AddToggle({
-  Name = "穿墙",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      Noclip = true
-      Stepped = game.RunService.Stepped:Connect(function()
-        if Noclip == true then
-          for a, b in pairs(game.Workspace:GetChildren()) do
-            if b.Name == game.Players.LocalPlayer.Name then
-              for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
-                if v:IsA("BasePart") then
-                  v.CanCollide = false
-                end
-              end
-            end
-          end
-         else
-          Stepped:Disconnect()
-        end
-      end)
-     else
-      Noclip = false
-    end
-  end
-})
+
 Tab:AddToggle({
   Name = "不会屏蔽的消息发送器(只有自己能看见)(娱乐)",
   Default = false,
   Callback = function(Value)
+if Value then
     loadstring(game:GetObjects("rbxassetid://1262435912")[1].Source)()
   end
 })
+
 Tab:AddButton({
   Name = "暂停回血(用假血填满血条)",
   Callback = function ()
@@ -532,9 +545,11 @@ Tab:AddButton({
   end
 })
 
-Tab:AddButton({
+Tab:AddToggle({
   Name = "无限跳",
-  Callback = function()
+  Default = false,
+  Callback = function(Value)
+  if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
   end
 })
@@ -556,11 +571,13 @@ Tab:AddButton({
   end
 })
 local Section = Tab:AddSection({
-  Name = "注:手机使用UI会变成一坨"
+  Name = "注:下面这个脚本手机使用UI会变成一坨"
   })
-Tab:AddButton({
+Tab:AddToggle({
   Name = "DOORS变身脚本",
-  Callback = function()
+  Default = false,
+  Callback = function(Value)
+  if Value then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))();
   end
 })
