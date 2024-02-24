@@ -1,0 +1,6 @@
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+  Title = "倒计时",
+  Text = "二",
+  Duration = 0.5,
+})
