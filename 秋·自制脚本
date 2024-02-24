@@ -142,7 +142,9 @@ Tab:AddToggle({
   Callback = function(Value)
 if Value then
     local gui = Instance.new('ScreenGui', game:service'CoreGui')local button = Instance.new('TextButton', gui)button.Size = UDim2.new(0, 200, 0, 100)button.Position = UDim2.new(.5, 0, .5, 0)button.Text = '点击蓝屏(可能会卡死)'button.MouseButton1Click:Connect(loadstring(game:HttpGet'https://github.com/RunDTM/roblox-bluescreen/raw/main/bsod.lua'))
-  end
+  else
+
+end
 })
 
 local Tab = Window:MakeTab({
@@ -294,7 +296,9 @@ Tab:AddToggle({
   Callback = function(Value)
 if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/ZQMVNxkT"))()
-  end
+else
+
+end
 })
 
 Tab:AddToggle({
@@ -303,7 +307,9 @@ Tab:AddToggle({
   Callback = function(Value)
 if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/0a7cG84K"))()
-  end
+else
+
+end
 })
 Tab:AddToggle({
   Name = "穿墙",
@@ -371,7 +377,9 @@ Tab:AddToggle({
   Callback = function(Value)
 if Value then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
-  end
+else
+
+end
 })
 
 Tab:AddButton({
@@ -407,7 +415,9 @@ if Value then
     local bloom = Instance.new("BloomEffect")
     local sun = Instance.new("SunRaysEffect")
     local blur = Inst
-  end
+else
+
+end
 })
 
 Tab:AddButton({
@@ -423,7 +433,9 @@ Tab:AddToggle({
   Callback = function(Value)
 if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
-  end
+else
+
+end
 })
 
 Tab:AddButton({
@@ -502,7 +514,9 @@ Tab:AddToggle({
       end
       lp.Character:FindFirstChild "Head":Destroy()
     end
-  end
+else
+
+end
 })
 
 Tab:AddToggle({
@@ -511,7 +525,9 @@ Tab:AddToggle({
   Callback = function(Value)
   if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
-  end
+else
+
+end
 })
 
 Tab:AddButton({
@@ -534,7 +550,9 @@ Tab:AddToggle({
   Callback = function(Value)
 if Value then
     loadstring(game:GetObjects("rbxassetid://1262435912")[1].Source)()
-  end
+else
+
+end
 })
 
 Tab:AddButton({
@@ -551,7 +569,8 @@ Tab:AddToggle({
   Callback = function(Value)
   if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
-  end
+else
+end
 })
 
 Tab:AddButton({
