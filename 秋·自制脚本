@@ -131,7 +131,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-  Name = "复制QQ群(群简介有2群)",
+  Name = "复制QQ群(群简介有2群和3群)",
   Callback = function()
     setclipboard("599654873")
   end
@@ -191,7 +191,7 @@ Tab:AddToggle({
   Default = false,
   Callback = function(Value)
     if Value then
-      game.Lighting.Ambient = Color3.new(1, 1, 1)
+      game.Lighting.Ambient = Color3.new(2, 2, 2)
      else
       game.Lighting.Ambient = Color3.new(0, 0, 0)
     end
@@ -205,20 +205,16 @@ Tab:AddButton({
   end
 })
 
-Tab:AddToggle({
+
+Tab:AddButton({
   Name = "调整别人的伤害箱(UI)(英文)",
-  Default = false,
-  Callback = function(Value)
-if Value then
+  Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/raw/ZQMVNxkT"))()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
 end
 })
 
 Tab:AddToggle({
-  Name = "穿墙",
+  Name = "穿墙(目前失效，不过下面的自动旋转能穿墙)",
   Default = false,
   Callback = function(Value)
     if Value then
@@ -252,6 +248,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+  Name = "旋转菜单(中文)",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E6%97%8B%E8%BD%AC%E8%8F%9C%E5%8D%95%E7%BF%BB%E8%AF%91~_!-..._%22%22%3A%22%22%3A...%2C%22%22%22%22_~_%22%22_...%3A...~%2C~%2C'"))()
+end
+})
+
+Tab:AddButton({
   Name = "键盘(关闭键会被挡住，有点难点到)",
   Default = false,
   Callback = function()
@@ -267,26 +270,14 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-  Name = "注:光影脚本，可单用也可叠加，效果都不一样"
+  Name = "注:光影脚本，可叠加，效果都不一样"
   })
 Tab:AddButton({
-  Name = "红色滤镜(点3次再点下面的会有夕阳的感觉)",
+  Name = "红色滤镜(搭配变亮会有夕阳的效果)",
   Default = false,
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
   end
-})
-
-Tab:AddToggle({
-  Name = "红色滤镜(开关版)",
-  Default = false,
-  Callback = function(Value)
-if Value then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
-else
-game.Lighting.Ambient = Color3.new(0, 0, 0)
-end
-end
 })
 
 Tab:AddButton({
@@ -306,28 +297,6 @@ Tab:AddButton({
   end
 })
 
-Tab:AddToggle({
-  Name = "美丽天空(开关版)",
-  Default = false,
-  Callback = function(Value)
-if Value then
-    -- Roblox Graphics Enhancher
-    local light = game.Lighting
-    for i, v in pairs(light:GetChildren()) do
-      v:Destroy()
-    end
-
-    local ter = workspace.Terrain
-    local color = Instance.new("ColorCorrectionEffect")
-    local bloom = Instance.new("BloomEffect")
-    local sun = Instance.new("SunRaysEffect")
-    local blur = Inst
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
-end
-})
-
 Tab:AddButton({
   Name = "超高画质",
   Callback = function()
@@ -335,25 +304,13 @@ Tab:AddButton({
   end
 })
 
-Tab:AddToggle({
-  Name = "超高画质(开关版)",
-  Default = false,
-  Callback = function(Value)
-if Value then
-    loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
-end
-})
 
 Tab:AddButton({
-  Name = "旋转菜单(未翻译)",
-  Callback = function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
-  end
-})
-
+      Name = "变亮",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(1, 1, 1)
+      end
+    })
 
 Tab:AddTextbox({
   Name = "移动速度",
@@ -362,6 +319,7 @@ Tab:AddTextbox({
   Callback = function(Value) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
   end
 })
+
 Tab:AddTextbox({
   Name = "跳跃高度(部分服务器)",
   Default = "",
