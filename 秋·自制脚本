@@ -136,17 +136,6 @@ Tab:AddButton({
     setclipboard("599654873")
   end
 })
-Tab:AddToggle({
-  Name = "娱乐蓝屏(点击之后会出来一个按钮，点击那个按钮才会蓝屏)(大退关闭)",
-  Default = false,
-  Callback = function(Value)
-if Value then
-    local gui = Instance.new('ScreenGui', game:service'CoreGui')local button = Instance.new('TextButton', gui)button.Size = UDim2.new(0, 200, 0, 100)button.Position = UDim2.new(.5, 0, .5, 0)button.Text = '点击蓝屏(可能会卡死)'button.MouseButton1Click:Connect(loadstring(game:HttpGet'https://github.com/RunDTM/roblox-bluescreen/raw/main/bsod.lua'))
-  else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
-end
-})
 
 local Tab = Window:MakeTab({
   Name = "一些服务器的菜单",
@@ -164,76 +153,6 @@ Tab:AddButton({
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
   end
 })
-
-Tab:AddButton({
-      Name = "巴掌模拟器-2",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E5%B7%B4%E6%8E%8C%E5%A4%A7%E6%88%98.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "自然灾害模拟器",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E8%87%AA%E7%84%B6%E7%81%BE%E5%AE%B3.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "刀刃球",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E5%88%80%E5%88%83%E7%90%83.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "一路向西",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E4%B8%80%E8%B7%AF%E5%90%91%E8%A5%BF.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "OHIO",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E4%BF%84%E4%BA%A5%E4%BF%84%E5%B7%9E.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "法宝模拟器",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E6%B3%95%E5%AE%9D%E6%A8%A1%E6%8B%9F%E5%99%A8.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "造船寻宝",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E9%80%A0%E8%88%B9%E5%AF%BB%E5%AE%9D.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "蜂群模拟器",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E8%9C%82%E7%BE%A4%E6%A8%A1%E6%8B%9F%E5%99%A8.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "钓鱼模拟器",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E9%92%93%E9%B1%BC%E6%A8%A1%E6%8B%9F%E5%99%A8.lua"))()
-      end
-    })
-
-Tab:AddButton({
-      Name = "餐厅大亨2",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E9%A4%90%E5%8E%85%E5%A4%A7%E4%BA%A82.lua"))()
-      end
-    })
 
 Tab:AddButton({
   Name = "目前最像白的伐木脚本",
@@ -260,12 +179,7 @@ Tab:AddButton({
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/BorkWare/main/Scripts/' .. game.GameId .. ".lua"))(' Watermelon ? ')
   end
 })
-Tab:AddButton({
-      Name = "彩虹朋友-2",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E5%BD%A9%E8%99%B9%E6%9C%8B%E5%8F%8B.lua"))()
-      end
-    })
+
 local Tab = Window:MakeTab({
   Name = "单独功能脚本",
   Icon = "rbxassetid://4483345998",
@@ -297,18 +211,6 @@ Tab:AddToggle({
   Callback = function(Value)
 if Value then
     loadstring(game:HttpGet("https://pastebin.com/raw/ZQMVNxkT"))()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
-end
-})
-
-Tab:AddToggle({
-  Name = "修改别人的伤害箱(英文)",
-  Default = false,
-  Callback = function(Value)
-if Value then
-    loadstring(game:HttpGet("https://pastebin.com/raw/0a7cG84K"))()
 else
 loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
 end
@@ -382,7 +284,7 @@ Tab:AddToggle({
 if Value then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MZEEN2424/Graphics/main/Graphics.xml"))()
 else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
+game.Lighting.Ambient = Color3.new(0, 0, 0)
 end
 end
 })
@@ -483,11 +385,9 @@ Tab:AddButton({
   end
 })
 
-Tab:AddToggle({
+Tab:AddButton({
   Name = "《掉头》(头会停在地，无法复活)",
-  Default = false,
-  Callback = function(Value)
-  if Value then
+  Callback = function()
     local lp = game:GetService "Players".LocalPlayer
     if lp.Character:FindFirstChild "Head" then
       local char = lp.Character
@@ -521,9 +421,6 @@ Tab:AddToggle({
       end
       lp.Character:FindFirstChild "Head":Destroy()
     end
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
 end
 })
 
@@ -553,18 +450,6 @@ Tab:AddButton({
   end
 })
 
-Tab:AddToggle({
-  Name = "不会屏蔽的消息发送器(只有自己能看见)(娱乐)",
-  Default = false,
-  Callback = function(Value)
-if Value then
-    loadstring(game:GetObjects("rbxassetid://1262435912")[1].Source)()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
-end
-})
-
 Tab:AddButton({
   Name = "暂停回血(用假血填满血条)",
   Callback = function ()
@@ -573,15 +458,10 @@ Tab:AddButton({
   end
 })
 
-Tab:AddToggle({
+Tab:AddButton({
   Name = "无限跳",
-  Default = false,
-  Callback = function(Value)
-  if Value then
+  Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
 end
 })
 
@@ -595,24 +475,14 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://7734068321",
   PremiumOnly = false
 })
-Tab:AddButton({
-  Name = "门绘图显示",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/doors1"))()
-  end
-})
+
 local Section = Tab:AddSection({
   Name = "注:下面这个脚本手机使用UI会变成一坨"
   })
-Tab:AddToggle({
+Tab:AddButton({
   Name = "DOORS变身脚本",
-  Default = false,
-  Callback = function(Value)
-  if Value then
+  Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))();
- else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
 end
 })
 local Section = Tab:AddSection({
@@ -1153,41 +1023,6 @@ local Tab = Window:MakeTab({
   Name = "监狱人生",
   Icon = "rbxassetid://7734068321",
   PremiumOnly = false
-})
-
-Tab:AddButton({
-  Name = "变车模型",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/bianche"))()
-  end
-})
-
-Tab:AddButton({
-  Name = "手里剑（秒杀）",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/jianyu1"))()
-  end
-})
-
-Tab:AddButton({
-  Name = "杀死全部（新版重复杀）",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/jianyu2"))()
-  end
-})
-
-Tab:AddButton({
-  Name = "无敌模式（别人可见）",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/jianyu4"))()
-  end
-})
-
-Tab:AddButton({
-  Name = "手拿电锯",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/cbhlyy/lyycbh/main/jianyu3", true))()
-  end
 })
 
 local Section = Tab:AddSection({
