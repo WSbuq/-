@@ -153,6 +153,7 @@ Tab:AddToggle({
     else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/killNPC1"))()
   end
+end
 })
 
 Tab:AddButton({
