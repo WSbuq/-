@@ -144,6 +144,39 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
+Tab:AddToggle({
+  Name = "秒杀NPC(会卡)",
+  Default = false,
+  Callback = function(Value)
+  if Value then
+    getgenv().G = true
+getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
+while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
+wait(1)
+sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 112412400000)
+sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 112412400000)
+for i,d in pairs(game:GetService("Workspace"):GetDescendants()) do
+    if d.ClassName == 'Humanoid' and d.Parent.Name ~= game.Players.LocalPlayer.Name then
+        d.Health = 0
+    end
+end
+end
+    else
+    getgenv().G = false
+getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
+while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
+wait(1)
+sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 112412400000)
+sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 112412400000)
+for i,d in pairs(game:GetService("Workspace"):GetDescendants()) do
+    if d.ClassName == 'Humanoid' and d.Parent.Name ~= game.Players.LocalPlayer.Name then
+        d.Health = 0
+    end
+end
+end
+  end
+})
+
 Tab:AddTextbox({
   Name = "移动速度",
   Default = "",
@@ -186,18 +219,6 @@ Tab:AddToggle({
   Callback = function(Value)
     if Value then
       game.Lighting.Ambient = Color3.new(2, 2, 2)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
-
-Tab:AddToggle({
-  Name = "反向夜视(变暗)",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(-1, -1, -1)
      else
       game.Lighting.Ambient = Color3.new(0, 0, 0)
     end
