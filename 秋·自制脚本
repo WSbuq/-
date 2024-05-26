@@ -430,6 +430,7 @@ end
 
 local Section = Tab:AddSection({
   Name = "传送功能"
+})
 
 Tab:AddButton({
       Name = "出生点",
