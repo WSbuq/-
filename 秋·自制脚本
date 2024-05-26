@@ -411,7 +411,77 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-  Name = "DOORS可用脚本(还有一些道具)",
+    Name = "长途旅行",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+  Name = "秒杀NPC(有血条就行)(可能会卡)",
+  Default = false,
+  Callback = function(Value)
+  if Value then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/killNPC"))()
+    else
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/killNPC1"))()
+  end
+end
+})
+
+local Section = Tab:AddSection({
+  Name = "传送功能"
+
+Tab:AddButton({
+      Name = "出生点",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(200, 10, 7850)
+      end
+    })
+    
+Tab:AddButton({
+      Name = "5000m(断桥)",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(825, 160, -22187)
+      end
+    })
+    
+Tab:AddButton({
+      Name = "7500m(不知道叫啥，有点像收费站)",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1375, -10, -37185)
+      end
+    })
+    
+Tab:AddButton({
+      Name = "10000m(土匪峡谷)",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1604.5782470703125, 188.24267578125, -52189.3359375)
+      end
+    })
+    
+Tab:AddButton({
+      Name = "15000m(补给站)",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2202.271240234375, 167.09689331054688, -82190.140625)
+      end
+    })
+   
+Tab:AddButton({
+      Name = "20000(无线电塔)(绳索枪)",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2096.17626953125, 73.0343246459961, -112185.7421875)
+      end
+    })
+    
+Tab:AddButton({
+      Name = "2450(鬼城)",
+      Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1214.936767578125, 124.07469940185547, -141889.09375)
+      end
+    })
+
+local Tab = Window:MakeTab({
+  Name = "DOORS可用脚本(还有一些通用道具)",
   Icon = "rbxassetid://7734068321",
   PremiumOnly = false
 })
