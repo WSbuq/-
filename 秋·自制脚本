@@ -4,28 +4,28 @@ CoreGui:SetCore("SendNotification", {
   Text = "开始倒计时",
   Duration = 1,
 })
-wait(0.5)
+wait(0.1)
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "倒计时",
   Text = "三",
   Duration = 0.3,
 })
-wait(0.5)
+wait(0.1)
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "倒计时",
   Text = "二",
   Duration = 0.3,
 })
-wait(0.5)
+wait(0.1)
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "倒计时",
   Text = "一",
   Duration = 0.3,
 })
-wait(0.2)
+wait(0.3)
 print("Anti Afk On")
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -94,18 +94,20 @@ end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/WS857960/-/main/QJBDUI.txt'))()
-local Window = OrionLib:MakeWindow({Name = "秋·自制脚本｜更新｜2024.517.1501", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
+local Window = OrionLib:MakeWindow({Name = "秋·自制脚本", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
 OrionLib:MakeNotification({
   Name = "欢迎使用秋·自制脚本,作者QQ:539414413",
   Content = "当前游戏ID为:" .. game.GameId .. " ",
   Image = "rbxassetid://7734068321",
   Time = 10
 })
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "首页",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
+Tab:AddParagraph("更新内容(2024.628.942):","启动动画")
 local Section = Tab:AddSection({
   Name = "注:脚本完全免费,主要还是想帮上忙"
   })
@@ -142,18 +144,6 @@ local Tab = Window:MakeTab({
   Name = "主要功能",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
-})
-
-Tab:AddToggle({
-  Name = "秒杀NPC(有血条就行)(可能会卡)",
-  Default = false,
-  Callback = function(Value)
-  if Value then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/killNPC"))()
-    else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/killNPC1"))()
-  end
-end
 })
 
 Tab:AddButton({
@@ -200,11 +190,11 @@ Tab:AddToggle({
 })
 
 Tab:AddToggle({
-  Name = "夜视2级(更亮)",
+  Name = "乱搞的",
   Default = false,
   Callback = function(Value)
     if Value then
-      game.Lighting.Ambient = Color3.new(2, 2, 2)
+      game.Lighting.Ambient = Color3.new(2, 1, 0)
      else
       game.Lighting.Ambient = Color3.new(0, 0, 0)
     end
@@ -226,35 +216,8 @@ Tab:AddButton({
 end
 })
 
-Tab:AddToggle({
-  Name = "穿墙(目前失效，不过下面的自动旋转开启后能穿墙)",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      Noclip = true
-      Stepped = game.RunService.Stepped:Connect(function()
-        if Noclip == true then
-          for a, b in pairs(game.Workspace:GetChildren()) do
-            if b.Name == game.Players.LocalPlayer.Name then
-              for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
-                if v:IsA("BasePart") then
-                  v.CanCollide = false
-                end
-              end
-            end
-          end
-         else
-          Stepped:Disconnect()
-        end
-      end)
-     else
-      Noclip = false
-    end
-  end
-})
-
 Tab:AddButton({
-  Name = "旋转菜单(秋风拂过汉化)",
+  Name = "旋转菜单(启动后可以穿墙，如果只想穿墙就把速度调成0)(秋风拂过汉化)",
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E6%97%8B%E8%BD%AC%E8%8F%9C%E5%8D%95%E7%BF%BB%E8%AF%91~_!-..._%22%22%3A%22%22%3A...%2C%22%22%22%22_~_%22%22_...%3A...~%2C~%2C'"))()
 end
@@ -299,28 +262,28 @@ Tab:AddButton({
       local new = char:Clone()
       new.Parent = workspace
       lp.Character = new
-      wait(2)
+      wait(0.1)
       local oldhum = char:FindFirstChildWhichIsA "Humanoid"
       local newhum = oldhum:Clone()
       newhum.Parent = char
       newhum.RequiresNeck = false
       oldhum.Parent = nil
-      wait(2)
+      wait(0.1)
       lp.Character = char
       new:Destroy()
-      wait(1)
+      wait(0.1)
       newhum:GetPropertyChangedSignal("Health"):Connect(
       function()
         if newhum.Health <= 0 then
           oldhum.Parent = lp.Character
-          wait(1)
+          wait(0.1)
           oldhum:Destroy()
         end
       end)
       workspace.CurrentCamera.CameraSubject = char
       if char:FindFirstChild "Animate" then
         char.Animate.Disabled = true
-        wait(.1)
+        wait(0.1)
         char.Animate.Disabled = false
       end
       lp.Character:FindFirstChild "Head":Destroy()
@@ -329,7 +292,7 @@ end
 })
 
 Tab:AddToggle({
-  Name = "跑墙《失败的man》(可以在强上走和跳)(视角可能会有点怪)",
+  Name = "跑墙《失败的man》(可以在强上走和跳)(视角和灵敏度可能会有点怪)",
   Default = false,
   Callback = function(Value)
   if Value then
@@ -341,14 +304,14 @@ end
 })
 
 Tab:AddButton({
-  Name = "悬浮",
+  Name = "悬浮(关闭后有点bug)",
   Callback = function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
   end
 })
 
 Tab:AddButton({
-  Name = "隐身道具(真)",
+  Name = "隐身道具(别人看不见，但是头上有东西就会传送上去)",
   Callback = function()
     loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()
   end
@@ -371,7 +334,8 @@ end
 
 Tab:AddButton({
   Name = "工具包",
-  Callback = function() loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+  Callback = function() 
+loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
   end
 })
 
@@ -409,7 +373,7 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
     Name = "长途旅行",
 	Icon = "rbxassetid://4483345998",
@@ -417,7 +381,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddToggle({
-  Name = "秒杀NPC(有血条就行)(可能会卡)",
+  Name = "秒杀NPC(有血条就行，所以算是通用)(可能会卡)",
   Default = false,
   Callback = function(Value)
   if Value then
@@ -429,7 +393,7 @@ end
 })
 
 local Section = Tab:AddSection({
-  Name = "传送功能"
+  Name = "传送功能(因为机制问题(绝对不是我不想搞那么多坐标)，必须去了之后才有路，不过能搞任务)"
 })
 
 Tab:AddButton({
@@ -475,12 +439,12 @@ Tab:AddButton({
     })
     
 Tab:AddButton({
-      Name = "2450(鬼城)",
+      Name = "24500(鬼城)",
       Callback = function()
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1214.936767578125, 124.07469940185547, -141889.09375)
       end
     })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "DOORS可用脚本(还有一些通用道具)",
   Icon = "rbxassetid://7734068321",
@@ -557,7 +521,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-  Name = "紫色手电筒（在电梯购买东西的时候使用）",
+  Name = "紫色手电筒（在电梯购买东西的时候使用会在商店）",
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/K0t1n/Public/main/Purple%20Flashlight"))()
   end
@@ -607,7 +571,7 @@ Tab:AddButton({
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Ukazix/impossible-mode/main/Protected_79.lua.txt'))()
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "巴掌模拟器",
   Icon = "rbxassetid://4483345998",
@@ -622,7 +586,7 @@ Tab:AddButton({
     })
 
 Tab:AddButton({
-  Name = "巴掌模拟器一些比较简单的功能",
+  Name = "巴掌模拟器(一些比较简单的功能)",
   Callback = function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Unknownkellymc1/Unknownscripts/main/slap-battles')))()
   end
@@ -634,7 +598,7 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Dusty1234567890/Rob/main/Rob"))()
       end
     })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "伐木大亨2",
   Icon = "rbxassetid://4483345998",
@@ -642,19 +606,12 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-  Name = "目前最像白的伐木脚本",
+  Name = "目前最像白的免费伐木脚本(英文)",
   Callback = function()
     loadstring(game:HttpGet('https://getexploits.com/key-system/',true))('https://da.com/936657404291084298/1006220505583460352/Script.txt')
   end
 })
-
-Tab:AddButton({
-      Name = "白脚本",
-      Callback = function()
-        _G.qq='1790789616'loadstring(game:HttpGet(('https://raw.githubusercontent.com/wev666666/baijiaobengV2.0beta/main/%E7%99%BD%E8%84%9A%E6%9C%ACbeta'),true))()
-      end
-    })
-
+wait(0.1)
 local Tab = Window:MakeTab({
     Name = "bf",
 	Icon = "rbxassetid://4483345998",
@@ -667,7 +624,7 @@ Tab:AddButton({
     oadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Mobile-Loader"))()
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
     Name = "彩虹朋友",
 	Icon = "rbxassetid://4483345998",
@@ -680,7 +637,7 @@ Tab:AddButton({
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/BorkWare/main/Scripts/' .. game.GameId .. ".lua"))(' Watermelon ? ')
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "灭霸模拟器",
   Icon = "rbxassetid://4483345998",
@@ -734,7 +691,7 @@ Tab:AddButton({
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(99999,-4985,99999)
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "速度传奇",
   Icon = "rbxassetid://4483345998",
@@ -748,7 +705,7 @@ Tab:AddButton({
   end
 })
 
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "忍者传奇",
   Icon = "rbxassetid://7734068321",
@@ -1081,6 +1038,7 @@ Tab:AddButton(
   end
 }
 )
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "极速传奇",
   Icon = "rbxassetid://7734068321",
@@ -1118,7 +1076,7 @@ Tab:AddButton({
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13098.87109375, 216.83917236328125, 5907.6279296875)
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "监狱人生",
   Icon = "rbxassetid://7734068321",
@@ -1156,7 +1114,7 @@ Tab:AddButton({
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(760.6033325195312, 96.96992492675781, 2475.405029296875)
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "其他脚本菜单(部分会覆盖)",
   Icon = "rbxassetid://4483345998",
@@ -1210,7 +1168,7 @@ Tab:AddButton({
     loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\103\101\109\120\72\119\65\49"))()
   end
 })
-
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "DOORS娱乐十字架",
   Icon = "rbxassetid://4483345998",
@@ -1232,6 +1190,7 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://pastebin.com/raw/W1AzELhb"))()
   end
 })
+wait(0.1)
 local Tab = Window:MakeTab({
   Name = "FE脚本(全是英文的，因为太多不想翻译)",
   Icon = "rbxassetid://4483345998",
