@@ -107,7 +107,7 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
-Tab:AddParagraph("更新内容(2024.628.942):","通用夜视和滤镜")
+Tab:AddParagraph("更新内容(2024.630.1019):","通用夜视和滤镜")
 local Section = Tab:AddSection({
   Name = "注:脚本完全免费,主要还是想帮上忙"
   })
