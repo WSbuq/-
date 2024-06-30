@@ -107,7 +107,7 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
-Tab:AddParagraph("更新内容(2024.628.942):","启动动画")
+Tab:AddParagraph("更新内容(2024.628.942):","通用夜视和滤镜")
 local Section = Tab:AddSection({
   Name = "注:脚本完全免费,主要还是想帮上忙"
   })
@@ -174,30 +174,6 @@ Tab:AddTextbox({
   TextDisappear = true,
   Callback = function(Value)
     game.Workspace.Gravity = Value
-  end
-})
-
-Tab:AddToggle({
-  Name = "夜视",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(1, 1, 1)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
-
-Tab:AddToggle({
-  Name = "乱搞的",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(2, 1, 0)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
   end
 })
 
@@ -336,6 +312,92 @@ Tab:AddButton({
   Name = "工具包",
   Callback = function() 
 loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+  end
+})
+local Section = Tab:AddSection({
+  Name = "夜视和一些滤镜"
+})
+
+Tab:AddToggle({
+  Name = "夜视",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      game.Lighting.Ambient = Color3.new(1, 1, 1)
+     else
+      game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
+  end
+})
+
+Tab:AddToggle({
+  Name = "夜视二级",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      game.Lighting.Ambient = Color3.new(2, 2, 2)
+     else
+      game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
+  end
+})
+
+Tab:AddToggle({
+  Name = "夜视三级",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      game.Lighting.Ambient = Color3.new(3, 3, 3)
+     else
+      game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
+  end
+})
+
+Tab:AddToggle({
+  Name = "夜视225?",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      game.Lighting.Ambient = Color3.new(225, 225, 225)
+     else
+      game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
+  end
+})
+
+
+Tab:AddToggle({
+  Name = "乱搞的1",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      game.Lighting.Ambient = Color3.new(2, 1, 0)
+     else
+      game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
+  end
+})
+Tab:AddToggle({
+  Name = "乱搞的2",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      game.Lighting.Ambient = Color3.new(0, 1, 2)
+     else
+      game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
+  end
+})
+Tab:AddToggle({
+  Name = "乱搞的3",
+  Default = false,
+  Callback = function(Value)
+    if Value then
+      game.Lighting.Ambient = Color3.new(1, 2, 0)
+     else
+      game.Lighting.Ambient = Color3.new(0, 0, 0)
+    end
   end
 })
 
