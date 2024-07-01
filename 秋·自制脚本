@@ -55,6 +55,24 @@ CoreGui:SetCore("SendNotification", {
   Duration = 5,
 })
 
+
+local fpsGui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+fpsGui.Name = "FPSGui"
+fpsGui.ResetOnSpawn = false
+fpsGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local fpsLabel = Instance.new("TextLabel", fpsGui)
+fpsLabel.Name = "FPSLabel"
+fpsLabel.BackgroundColor3 = Color3.new(0, 0, 0) 
+fpsLabel.BackgroundTransparency = 1 
+fpsLabel.Size = UDim2.new(0, 100, 0, 20) 
+fpsLabel.Position = UDim2.new(0.5, 0, 0.95, 0) 
+fpsLabel.AnchorPoint = Vector2.new(0.5, 1) 
+fpsLabel.Font = Enum.Font.Gotham 
+fpsLabel.TextColor3 = Color3.new(0, 3, 1) 
+fpsLabel.TextSize = 14 
+fpsLabel.Text = "作者:秋风拂过" 
+fpsLabel.Parent = fpsGui
+
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/WS857960/-/main/QJBDUI.txt'))()
 local Window = OrionLib:MakeWindow({Name = "秋·自制脚本", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
 OrionLib:MakeNotification({
