@@ -105,6 +105,17 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
+Tab:AddToggle({
+  Name = "当前时间",
+  Default = false,
+  Callback = function(Value)
+  if Value then
+    https://raw.githubusercontent.com/WSbuq/-/main/dqsj
+    else
+    https://raw.githubusercontent.com/WSbuq/-/main/dqsj1
+  end
+})
+
 
 Tab:AddButton({
       Name = "位置仪",
