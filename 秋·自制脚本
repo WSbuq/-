@@ -25,6 +25,15 @@ CoreGui:SetCore("SendNotification", {
   Text = "一",
   Duration = 0.1,
 })
+wait(0)
+print("Anti Afk On")
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+  vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+  wait(10)
+  vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+wait(0)
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "反挂机已自动开启",
@@ -45,6 +54,7 @@ CoreGui:SetCore("SendNotification", {
   Text = "您好"..game.Players.LocalPlayer.Name.."，欢迎使用秋·自制脚本",
   Duration = 5,
 })
+
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/WS857960/-/main/QJBDUI.txt'))()
 local Window = OrionLib:MakeWindow({Name = "秋·自制脚本", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
 OrionLib:MakeNotification({
@@ -97,18 +107,18 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
+
 Tab:AddToggle({
   Name = "当前时间",
   Default = false,
   Callback = function(Value)
-  if Value then
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/dqsj"))()
+    if Value then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/dqsj"))()
     else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/dqsj1"))()
+    end
   end
-end
 })
-
 
 Tab:AddButton({
       Name = "位置仪",
