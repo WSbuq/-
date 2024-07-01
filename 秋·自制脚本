@@ -267,17 +267,12 @@ Tab:AddButton({
 end
 })
 
-Tab:AddToggle({
-  Name = "跑墙《失败的man》(可以在强上走和跳)(视角和灵敏度可能会有点怪)",
-  Default = false,
-  Callback = function(Value)
-  if Value then
-    loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/emm"))()
-end
-end
-})
+Tab:AddButton({
+      Name = "走墙(有点bug)",
+      Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+      end
+    })
 
 Tab:AddButton({
   Name = "悬浮(关闭后有点bug)",
@@ -318,88 +313,83 @@ local Section = Tab:AddSection({
   Name = "夜视和一些滤镜"
 })
 
-Tab:AddToggle({
-  Name = "夜视",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(1, 1, 1)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
+Tab:AddButton({
+      Name = "恢复默认",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(0, 0, 0)
+      end
+    })
+Tab:AddButton({
+      Name = "亮度-1",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(-1, -1, -1)
+      end
+    })
+Tab:AddButton({
+      Name = "亮度+1",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(1, 1, 1)
+      end
+    })
+Tab:AddButton({
+      Name = "亮度+2",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(2, 2, 2)
+      end
+    })
 
-Tab:AddToggle({
-  Name = "夜视二级",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(2, 2, 2)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
+Tab:AddButton({
+      Name = "亮度+5",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(5, 5, 5)
+      end
+    })
 
-Tab:AddToggle({
-  Name = "夜视三级",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(3, 3, 3)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
+Tab:AddButton({
+      Name = "亮度+255?",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(255, 255, 255)
+      end
+    })
 
-Tab:AddToggle({
-  Name = "夜视225?",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(225, 225, 225)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
+Tab:AddButton({
+	Name = "红+1",
+	Callback = function()
+game.Lighting.Ambient = Color3.new(1, 0, 0)
+end
+})    
+Tab:AddButton({
+	Name = "蓝+1",
+	Callback = function()
+game.Lighting.Ambient = Color3.new(0, 1, 0)
+end
+})    
 
+Tab:AddButton({
+      Name = "绿+1",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(0, 0, 1)
+      end
+    })
+Tab:AddButton({
+	Name = "红-1",
+	Callback = function()
+game.Lighting.Ambient = Color3.new(-1, 0, 0)
+end
+})    
+Tab:AddButton({
+	Name = "蓝-1",
+	Callback = function()
+game.Lighting.Ambient = Color3.new(0, -1, 0)
+end
+})    
 
-Tab:AddToggle({
-  Name = "乱搞的1",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(2, 1, 0)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
-Tab:AddToggle({
-  Name = "乱搞的2",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(0, 1, 2)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
-Tab:AddToggle({
-  Name = "乱搞的3",
-  Default = false,
-  Callback = function(Value)
-    if Value then
-      game.Lighting.Ambient = Color3.new(1, 2, 0)
-     else
-      game.Lighting.Ambient = Color3.new(0, 0, 0)
-    end
-  end
-})
+Tab:AddButton({
+      Name = "绿-1",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(0, 0, -1)
+      end
+    })
 
 local Section = Tab:AddSection({
   Name = "注:光影脚本，可叠加，效果都不一样"
