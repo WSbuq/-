@@ -1185,7 +1185,6 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-})
 Tab:AddButton({
   Name = "变车模型",
   Callback = function()
@@ -1228,7 +1227,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-  Name = "传送位置"
+  Name = "传送位置"})
 Tab:AddButton({
   Name = "警卫室",
   Callback = function()
