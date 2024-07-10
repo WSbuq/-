@@ -203,6 +203,43 @@ Tab:AddTextbox({
   end
 })
 
+Tab:AddTextbox({
+  Name = "HP设置(一般没用)",
+  Default = "",
+  TextDisappear = true,
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.Health = Value
+  end
+})
+
+Tab:AddButton({
+  Name = "甩飞别人",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "透视",
+  Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/MA8jhPWT'))()
+  end
+})
+
+Tab:AddButton({
+  Name = "吸取全部玩家",
+  Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/hQSBGsw2'))()
+  end
+})
+
+Tab:AddButton({
+  Name = "人物无敌(不确定有没有用)",
+  Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/H3RLCWWZ'))()
+  end
+})
+
 Tab:AddButton({
   Name = "指令挂(英文)（类似管理员，不过大部分功能只是表象）",
   Callback = function()
@@ -1117,6 +1154,20 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
+Tab:AddButton({
+  Name = "开启卡宠",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()
+  end
+})
+
+
+Tab:AddButton({
+  Name = "自动重生和自动刷等级",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/T9wTL150"))()
+  end
+})
 local Section = Tab:AddSection({
   Name = "传送岛屿"
 })
@@ -1157,6 +1208,53 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
   Name = "传送位置"
+})
+Tab:AddButton({
+  Name = "变车模型",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/zLe3e4BS"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "变死神",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/ewv9bbRp"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "变钢铁侠",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/7prijqYH"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "手里剑（秒杀）",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/mSLiAZHk"))()
+  end
+})
+Tab:AddButton({
+  Name = "杀死全部",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/kXjfpFPh"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "无敌模式",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/LdTVujTA"))()
+  end
+})
+
+Tab:AddButton({
+  Name = "PRISONWARE V1.3",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+  end
 })
 
 Tab:AddButton({
@@ -1260,6 +1358,29 @@ Tab:AddButton({
   Name = "SCreech十字架(貌似没啥用)",
   Callback = function ()
     loadstring(game:HttpGet("https://pastebin.com/raw/W1AzELhb"))()
+  end
+})
+wait(0.1)
+local Tab = Window:MakeTab({
+  Name = "鲨口求生2",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+
+Tab:AddDropdown({
+  Name = "免费船只",
+  Default = "1",
+  Options = {"DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine", "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
+  Callback = function(Value)
+    local ohString1 = (Value)
+
+    game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
+  end
+})
+Tab:AddButton({
+  Name = "自动杀鲨鱼",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
   end
 })
 wait(0.1)
