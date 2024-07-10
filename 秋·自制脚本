@@ -219,19 +219,6 @@ Tab:AddButton({
   end
 })
 
-Tab:AddButton({
-  Name = "透视",
-  Callback = function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/MA8jhPWT'))()
-  end
-})
-
-Tab:AddButton({
-  Name = "吸取全部玩家",
-  Callback = function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/hQSBGsw2'))()
-  end
-})
 
 Tab:AddButton({
   Name = "人物无敌(不确定有没有用)",
@@ -1155,14 +1142,6 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-  Name = "开启卡宠",
-  Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()
-  end
-})
-
-
-Tab:AddButton({
   Name = "自动重生和自动刷等级",
   Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/raw/T9wTL150"))()
@@ -1206,8 +1185,6 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 
-local Section = Tab:AddSection({
-  Name = "传送位置"
 })
 Tab:AddButton({
   Name = "变车模型",
@@ -1220,13 +1197,6 @@ Tab:AddButton({
   Name = "变死神",
   Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/ewv9bbRp"))()
-  end
-})
-
-Tab:AddButton({
-  Name = "变钢铁侠",
-  Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/7prijqYH"))()
   end
 })
 
@@ -1257,6 +1227,8 @@ Tab:AddButton({
   end
 })
 
+local Section = Tab:AddSection({
+  Name = "传送位置"
 Tab:AddButton({
   Name = "警卫室",
   Callback = function()
@@ -1282,6 +1254,29 @@ Tab:AddButton({
   Name = "监狱室外",
   Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(760.6033325195312, 96.96992492675781, 2475.405029296875)
+  end
+})
+wait(0.1)
+local Tab = Window:MakeTab({
+  Name = "鲨口求生2",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+
+Tab:AddDropdown({
+  Name = "免费船只",
+  Default = "1",
+  Options = {"DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine", "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
+  Callback = function(Value)
+    local ohString1 = (Value)
+
+    game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
+  end
+})
+Tab:AddButton({
+  Name = "自动杀鲨鱼",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
   end
 })
 wait(0.1)
@@ -1360,29 +1355,7 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://pastebin.com/raw/W1AzELhb"))()
   end
 })
-wait(0.1)
-local Tab = Window:MakeTab({
-  Name = "鲨口求生2",
-  Icon = "rbxassetid://4483345998",
-  PremiumOnly = false
-})
 
-Tab:AddDropdown({
-  Name = "免费船只",
-  Default = "1",
-  Options = {"DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine", "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
-  Callback = function(Value)
-    local ohString1 = (Value)
-
-    game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
-  end
-})
-Tab:AddButton({
-  Name = "自动杀鲨鱼",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Misc%20Scripts/sharkbite2.lua",true))()
-  end
-})
 wait(0.1)
 local Tab = Window:MakeTab({
   Name = "FE脚本(全是英文的，因为太多不想翻译)",
