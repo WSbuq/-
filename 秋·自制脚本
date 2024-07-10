@@ -1147,6 +1147,7 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://pastebin.com/raw/T9wTL150"))()
   end
 })
+
 local Section = Tab:AddSection({
   Name = "传送岛屿"
 })
@@ -1227,7 +1228,9 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-  Name = "传送位置"})
+  Name = "传送位置"
+})
+
 Tab:AddButton({
   Name = "警卫室",
   Callback = function()
@@ -1268,10 +1271,10 @@ Tab:AddDropdown({
   Options = {"DuckyBoatBeta", "DuckyBoat", "BlueCanopyMotorboat", "BlueWoodenMotorboat", "UnicornBoat", "Jetski", "RedMarlin", "Sloop", "TugBoat", "SmallDinghyMotorboat", "JetskiDonut", "Marlin", "TubeBoat", "FishingBoat", "VikingShip", "SmallWoodenSailboat", "RedCanopyMotorboat", "Catamaran", "CombatBoat", "TourBoat", "Duckmarine", "PartyBoat", "MilitarySubmarine", "GingerbreadSteamBoat", "Sleigh2022", "Snowmobile", "CruiseShip"},
   Callback = function(Value)
     local ohString1 = (Value)
-
     game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(ohString1)
   end
 })
+
 Tab:AddButton({
   Name = "自动杀鲨鱼",
   Callback = function()
