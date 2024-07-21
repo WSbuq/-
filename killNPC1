@@ -2,8 +2,8 @@ getgenv().G = false
 getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
 while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
 wait(0)
-sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 112412400000)
-sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 112412400000)
+sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 1111)
+sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 1111)
 for i,d in pairs(game:GetService("Workspace"):GetDescendants()) do
     if d.ClassName == 'Humanoid' and d.Parent.Name ~= game.Players.LocalPlayer.Name then
         d.Health = -1
