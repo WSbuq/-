@@ -1,6 +1,6 @@
 getgenv().G = true
-getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
-while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
+getgenv().Creator = '秋风拂过'
+while getgenv().G and getgenv().Creator == '秋风拂过' do
 wait(1)
 sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 100)
 sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 100)
@@ -12,8 +12,8 @@ end
 end
 wait(1)
 getgenv().G = true
-getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
-while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
+getgenv().Creator = '秋风拂过'
+while getgenv().G and getgenv().Creator == '秋风拂过' do
 wait(1)
 sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 100)
 sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 100)
