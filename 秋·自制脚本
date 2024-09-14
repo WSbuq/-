@@ -389,12 +389,14 @@ Tab:AddButton({
       end
     })
 
-Tab:AddButton({
-      Name = "亮度255?",
-      Callback = function()
-        game.Lighting.Ambient = Color3.new(255, 255, 255)
-      end
-    })
+Tab:AddTextbox({
+  Name = 光照设置",
+  Default = "",
+  TextDisappear = true,
+  Callback = function(Value)
+    game.Lighting.Ambient = Color3.new(Value, Value, Value)
+  end
+})
 
 Tab:AddButton({
 	Name = "红",
@@ -471,22 +473,16 @@ Tab:AddButton({
 })
 wait(0.1)
 local Tab = Window:MakeTab({
-    Name = "造船寻宝",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-Tab:AddButton({
-      Name = "自动刷金条(1次)",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E8%87%AA%E5%8A%A8%E9%87%91%E6%9D%A1"))()
-      end
-    })
-wait(0.1)
-local Tab = Window:MakeTab({
     Name = "长途旅行",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+Tab:AddButton({
+      Name = "长途旅行(英文，要卡密)",
+      Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/a-dusty-trip-FREE-CAR-Gui-14352"))()
+      end
+    })
 
 Tab:AddToggle({
   Name = "秒杀NPC(有血条就行，所以算是通用)(可能会卡)",
@@ -511,47 +507,6 @@ Tab:AddButton({
       end
     })
     
-Tab:AddButton({
-      Name = "5000m(断桥)",
-      Callback = function()
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(825, 160, -22187)
-      end
-    })
-    
-Tab:AddButton({
-      Name = "7500m(不知道叫啥，有点像收费站)",
-      Callback = function()
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1375, -10, -37185)
-      end
-    })
-    
-Tab:AddButton({
-      Name = "10000m(土匪峡谷)",
-      Callback = function()
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1604.5782470703125, 188.24267578125, -52189.3359375)
-      end
-    })
-    
-Tab:AddButton({
-      Name = "15000m(补给站)",
-      Callback = function()
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2202.271240234375, 167.09689331054688, -82190.140625)
-      end
-    })
-   
-Tab:AddButton({
-      Name = "20000(无线电塔)(绳索枪)",
-      Callback = function()
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2096.17626953125, 73.0343246459961, -112185.7421875)
-      end
-    })
-    
-Tab:AddButton({
-      Name = "24500(鬼城)",
-      Callback = function()
-         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1214.936767578125, 124.07469940185547, -141889.09375)
-      end
-    })
 wait(0.1)
 local Tab = Window:MakeTab({
   Name = "DOORS可用脚本(还有一些通用道具)",
