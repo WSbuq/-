@@ -370,14 +370,6 @@ Tab:AddButton({
       end
     })
 
-Tab:AddTextbox({
-  Name = "设置关照",
-  Default = "",
-  TextDisappear = true,
-  Callback = function(Value)
-    game.Lighting = Value,Value,Value
-  end
-})
 
 Tab:AddButton({
       Name = "亮度1",
