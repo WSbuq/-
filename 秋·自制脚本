@@ -480,6 +480,12 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
       Name = "长途旅行(英文，要卡密)",
       Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+  end
+    })
+Tab:AddButton({
+      Name = "长途旅行2(英文，要卡密)",
+      Callback = function()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/FlexSniper",true))()
 end
     })
