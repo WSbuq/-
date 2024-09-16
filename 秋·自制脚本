@@ -375,7 +375,7 @@ Tab:AddTextbox({
   Default = "",
   TextDisappear = true,
   Callback = function(Value)
-    game.Lighting.Ambient = Value
+    game.Lighting = Value
   end
 })
 
