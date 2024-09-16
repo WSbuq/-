@@ -480,8 +480,8 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
       Name = "长途旅行(英文，要卡密)",
       Callback = function()
-        loadstring(game:HttpGet("https://scriptblox.com/raw/a-dusty-trip-FREE-CAR-Gui-14352"))()
-      end
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/FlexSniper",true))()
+end
     })
 
 Tab:AddToggle({
