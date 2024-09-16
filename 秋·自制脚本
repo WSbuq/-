@@ -371,11 +371,11 @@ Tab:AddButton({
     })
 
 Tab:AddTextbox({
-  Name = "光照设置",
-  Default = "","","",
+  Name = "设置关照",
+  Default = "",
   TextDisappear = true,
   Callback = function(Value)
-    game.Lighting.Ambient = Color3.new(Value)
+    game.Lighting.Ambient = Value
   end
 })
 
