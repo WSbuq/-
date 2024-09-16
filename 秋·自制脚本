@@ -477,19 +477,19 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab:AddButton({
-      Name = "长途旅行(英文，要卡密)",
-      Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
-  end
-    })
-Tab:AddButton({
-      Name = "长途旅行2(英文，要卡密)",
-      Callback = function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/FlexSniper",true))()
-end
-    })
 
+Tab:AddButton({
+      Name = "长途旅行1",
+      Callback = function()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+      end
+    })
+Tab:AddButton({
+      Name = "长途旅行2",
+      Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/FlexSniper",true))()
+      end
+    })
 Tab:AddToggle({
   Name = "秒杀NPC(有血条就行，所以算是通用)(可能会卡)",
   Default = false,
@@ -500,10 +500,6 @@ Tab:AddToggle({
     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/killNPC1"))()
   end
 end
-})
-
-local Section = Tab:AddSection({
-  Name = "传送功能(因为机制问题(绝对不是我不想搞那么多坐标)，必须去了之后才有路，不过能搞任务)"
 })
 
 Tab:AddButton({
@@ -526,7 +522,7 @@ local Section = Tab:AddSection({
 Tab:AddButton({
   Name = "DOORS变身脚本",
   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))()
 end
 })
 local Section = Tab:AddSection({
