@@ -369,14 +369,16 @@ Tab:AddButton({
         game.Lighting.Ambient = Color3.new(0, 0, 0)
       end
     })
+
 Tab:AddTextbox({
   Name = "光照设置",
   Default = "",
   TextDisappear = true,
   Callback = function(Value)
-    game.Lighting.Ambient = Color3.new(Value,Value,Value)
+    game.Lighting.Ambient = Color3.new(Value)
   end
 })
+
 Tab:AddButton({
       Name = "亮度1",
       Callback = function()
