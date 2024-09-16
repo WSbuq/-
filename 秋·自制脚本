@@ -390,7 +390,7 @@ Tab:AddButton({
     })
 
 Tab:AddTextbox({
-  Name = 光照设置",
+  Name = "光照设置",
   Default = "",
   TextDisappear = true,
   Callback = function(Value)
