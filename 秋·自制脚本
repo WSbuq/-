@@ -105,16 +105,13 @@ Tab:AddButton({
   end
 })
 
-local Section = Tab:AddSection({
-  Name = "飞车-注:多人在同一个载具上得在主驾驶位才能用，可以带别人飞，脚本不是我的，源码被加密了，我翻译不了"
-})
-
 Tab:AddButton({
   Name = "飞车",
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/1111/refs/heads/main/%E9%A3%9E%E8%BD%A6"))()
   end
 })
+Tab:AddParagraph("飞车-注:多人在同一个载具上得在主驾驶位才能用，可以带别人飞，","脚本不是我的，源码被加密了，我翻译不了")
 Tab:AddButton({
   Name = "旋转菜单(启动后可以穿墙，如果只想穿墙就把速度调成0)(秋风拂过汉化)",
   Callback = function()
