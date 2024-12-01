@@ -55,24 +55,6 @@ CoreGui:SetCore("SendNotification", {
   Duration = 5,
 })
 
-
-local fpsGui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
-fpsGui.Name = "FPSGui"
-fpsGui.ResetOnSpawn = false
-fpsGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-local fpsLabel = Instance.new("TextLabel", fpsGui)
-fpsLabel.Name = "FPSLabel"
-fpsLabel.BackgroundColor3 = Color3.new(0, 0, 0) 
-fpsLabel.BackgroundTransparency = 1 
-fpsLabel.Size = UDim2.new(0, 100, 0, 20) 
-fpsLabel.Position = UDim2.new(0.5, 0, 0.95, 0) 
-fpsLabel.AnchorPoint = Vector2.new(0.5, 1) 
-fpsLabel.Font = Enum.Font.Gotham 
-fpsLabel.TextColor3 = Color3.new(0, 3, 1) 
-fpsLabel.TextSize = 14 
-fpsLabel.Text = "作者:秋风拂过" 
-fpsLabel.Parent = fpsGui
-
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/WS857960/-/main/QJBDUI.txt'))()
 local Window = OrionLib:MakeWindow({Name = "秋·自制脚本", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
 wait(0.1)
@@ -81,7 +63,7 @@ local Tab = Window:MakeTab({
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
-Tab:AddParagraph("更新内容(2024.630.1019):","通用夜视和滤镜")
+Tab:AddParagraph("更新内容(2024年12月01号):","一个类似普通飞行的飞车")
 local Section = Tab:AddSection({
   Name = "注:脚本完全免费,主要还是想帮上忙"
   })
@@ -89,9 +71,7 @@ Tab:AddParagraph("你好"..game.Players.LocalPlayer.Name..",欢迎使用秋·自
 Tab:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 Tab:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 Tab:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
-
 Tab:AddParagraph("反挂机已启动","")
-
 Tab:AddButton({
   Name = "反挂机2",
   Callback = function()
@@ -113,122 +93,46 @@ Tab:AddButton({
   end
 })
 
-
 local Tab = Window:MakeTab({
   Name = "主要功能",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
+Tab:AddButton({
+  Name = "飞行V3(秋风拂过汉化)",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E7%A7%8B%E7%9A%84%E9%A3%9E%E8%A1%8CV3"))()
+  end
+})
+
+local Section = Tab:AddSection({
+  Name = "飞车-注:多人在同一个载具上得在主驾驶位才能用，可以带别人飞，脚本不是我的，源码被加密了，我翻译不了"
+})
 
 Tab:AddButton({
-      Name = "当前时间",
-      Callback = function()
-        local LBLG = Instance.new("ScreenGui", getParent)
-local LBL = Instance.new("TextLabel", getParent)
-local player = game.Players.LocalPlayer
-
-LBLG.Name = "LBLG"
-LBLG.Parent = game.CoreGui
-LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-LBLG.Enabled = true
-LBL.Name = "LBL"
-LBL.Parent = LBLG
-LBL.BackgroundColor3 = Color3.new(0, 3, 1)
-LBL.BackgroundTransparency = 1
-LBL.BorderColor3 = Color3.new(0, 3, 1)
-LBL.Position = UDim2.new(0.75,0,0.010,0)
-LBL.Size = UDim2.new(0, 133, 0, 30)
-LBL.Font = Enum.Font.GothamSemibold
-LBL.Text = "TextLabel"
-LBL.TextColor3 = Color3.new(0, 3, 3)
-LBL.TextScaled = true
-LBL.TextSize = 14
-LBL.TextWrapped = true
-LBL.Visible = true
-
-local FpsLabel = LBL
-local Heartbeat = game:GetService("RunService").Heartbeat
-local LastIteration, Start
-local FrameUpdateTable = { }
-
-local function HeartbeatUpdate()
-  LastIteration = tick()
-  for Index = #FrameUpdateTable, 1, -1 do
-    FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+  Name = "飞车",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/1111/refs/heads/main/%E9%A3%9E%E8%BD%A6"))()
   end
-  FrameUpdateTable[1] = LastIteration
-  local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
-  CurrentFPS = CurrentFPS - CurrentFPS % 1
-  FpsLabel.Text = ("当前时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+})
+Tab:AddButton({
+  Name = "旋转菜单(启动后可以穿墙，如果只想穿墙就把速度调成0)(秋风拂过汉化)",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E6%97%8B%E8%BD%AC%E8%8F%9C%E5%8D%95%E7%BF%BB%E8%AF%91~_!-..._%22%22%3A%22%22%3A...%2C%22%22%22%22_~_%22%22_...%3A...~%2C~%2C'"))()
 end
-Start = tick()
-Heartbeat:Connect(HeartbeatUpdate)
-      end
-    })
-
+})
 Tab:AddButton({
-      Name = "位置仪",
-      Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E4%BD%8D%E7%BD%AE%E4%BB%AA"))()
-      end
-    })
-
-Tab:AddTextbox({
-  Name = "移动速度",
-  Default = "",
-  TextDisappear = true,
-  Callback = function(Value) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-  end
-})
-
-Tab:AddTextbox({
-  Name = "跳跃高度(部分服务器)",
-  Default = "",
-  TextDisappear = true,
-  Callback = function(Value) game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
-  end
-})
-Tab:AddTextbox({
-  Name = "重力设置",
-  Default = "",
-  TextDisappear = true,
-  Callback = function(Value)
-    game.Workspace.Gravity = Value
-  end
-})
-
-Tab:AddTextbox({
-  Name = "HP设置(一般没用)",
-  Default = "",
-  TextDisappear = true,
-  Callback = function(Value)
-    game.Players.LocalPlayer.Character.Humanoid.Health = Value
-  end
-})
-
-Tab:AddButton({
-  Name = "甩飞别人",
+  Name = "无限跳",
   Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
-  end
+    loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+end
 })
-
-
 Tab:AddButton({
-  Name = "人物无敌(不确定有没有用)",
-  Callback = function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/H3RLCWWZ'))()
-  end
-})
-
-Tab:AddButton({
-  Name = "指令挂(英文)（类似管理员，不过大部分功能只是表象）",
+  Name = "infinite yield-无限增量指令挂（类似管理员，不过大部分功能只是表象）",
   Callback = function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
   end
 })
-
-
 Tab:AddButton({
   Name = "调整别人的伤害箱(UI)(英文)",
   Callback = function()
@@ -237,28 +141,7 @@ end
 })
 
 Tab:AddButton({
-  Name = "旋转菜单(启动后可以穿墙，如果只想穿墙就把速度调成0)(秋风拂过汉化)",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E6%97%8B%E8%BD%AC%E8%8F%9C%E5%8D%95%E7%BF%BB%E8%AF%91~_!-..._%22%22%3A%22%22%3A...%2C%22%22%22%22_~_%22%22_...%3A...~%2C~%2C'"))()
-end
-})
-
-Tab:AddButton({
-  Name = "飞行V3(秋风拂过汉化)",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E7%A7%8B%E7%9A%84%E9%A3%9E%E8%A1%8CV3"))()
-  end
-})
-
-Tab:AddButton({
-  Name = "飞车(注:多人在同一个载具上得在主驾驶位才能用，可以带别人飞，脚本不是我的，源码被加密了，我翻译不了)",
-  Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/1111/refs/heads/main/%E9%A3%9E%E8%BD%A6"))()
-  end
-})
-
-Tab:AddButton({
-  Name = "键盘(关闭键会被挡住，有点难点到)",
+  Name = "移动端键盘(关闭键会被挡住，有点难点到)",
   Default = false,
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
@@ -319,7 +202,7 @@ Tab:AddButton({
     })
 
 Tab:AddButton({
-  Name = "悬浮(关闭后有点bug)",
+  Name = "悬浮(有点bug)",
   Callback = function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
   end
@@ -339,90 +222,105 @@ Tab:AddButton({
     game.Players.LocalPlayer.Character.Humanoid.Health = FullHealth
   end
 })
-
 Tab:AddButton({
-  Name = "无限跳",
-  Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
-end
-})
-
-Tab:AddButton({
-  Name = "工具包",
+  Name = "工具包(自己可见)",
   Callback = function() 
 loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
   end
 })
-local Section = Tab:AddSection({
-  Name = "夜视和一些滤镜(一次只能用一个)"
+Tab:AddButton({
+      Name = "位置仪",
+      Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/main/%E4%BD%8D%E7%BD%AE%E4%BB%AA"))()
+      end
+    })
+Tab:AddButton({
+      Name = "当前时间(实时更新)",
+      Callback = function()
+        local LBLG = Instance.new("ScreenGui", getParent)
+local LBL = Instance.new("TextLabel", getParent)
+local player = game.Players.LocalPlayer
+
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+LBL.Name = "LBL"
+LBL.Parent = LBLG
+LBL.BackgroundColor3 = Color3.new(0, 3, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 3, 1)
+LBL.Position = UDim2.new(0.75,0,0.010,0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "TextLabel"
+LBL.TextColor3 = Color3.new(0, 3, 3)
+LBL.TextScaled = true
+LBL.TextSize = 14
+LBL.TextWrapped = true
+LBL.Visible = true
+
+local FpsLabel = LBL
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = { }
+
+local function HeartbeatUpdate()
+  LastIteration = tick()
+  for Index = #FrameUpdateTable, 1, -1 do
+    FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+  end
+  FrameUpdateTable[1] = LastIteration
+  local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+  CurrentFPS = CurrentFPS - CurrentFPS % 1
+  FpsLabel.Text = ("当前时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+end
+Start = tick()
+Heartbeat:Connect(HeartbeatUpdate)
+      end
+    })
+local Tab = Window:MakeTab({
+  Name = "基础数值修改",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false
+})
+Tab:AddTextbox({
+  Name = "移动速度",
+  Default = "",
+  TextDisappear = true,
+  Callback = function(Value) game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+  end
 })
 
-Tab:AddButton({
-      Name = "恢复默认",
-      Callback = function()
-        game.Lighting.Ambient = Color3.new(0, 0, 0)
-      end
-    })
+Tab:AddTextbox({
+  Name = "跳跃高度(部分服务器)",
+  Default = "",
+  TextDisappear = true,
+  Callback = function(Value) game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+  end
+})
+Tab:AddTextbox({
+  Name = "重力设置",
+  Default = "",
+  TextDisappear = true,
+  Callback = function(Value)
+    game.Workspace.Gravity = Value
+  end
+})
 
-
-Tab:AddButton({
-      Name = "亮度1",
-      Callback = function()
-        game.Lighting.Ambient = Color3.new(1, 1, 1)
-      end
-    })
-Tab:AddButton({
-      Name = "亮度2",
-      Callback = function()
-        game.Lighting.Ambient = Color3.new(2, 2, 2)
-      end
-    })
-
-Tab:AddButton({
-      Name = "亮度3",
-      Callback = function()
-        game.Lighting.Ambient = Color3.new(3, 3, 3)
-      end
-    })
-
-Tab:AddButton({
-	Name = "红",
-	Callback = function()
-game.Lighting.Ambient = Color3.new(1, 0, 0)
-end
-})    
-Tab:AddButton({
-	Name = "绿",
-	Callback = function()
-game.Lighting.Ambient = Color3.new(0, 1, 0)
-end
-})    
-
-Tab:AddButton({
-      Name = "蓝",
-      Callback = function()
-        game.Lighting.Ambient = Color3.new(0, 0, 1)
-      end
-    })
-Tab:AddButton({
-	Name = "乱搞1",
-	Callback = function()
-game.Lighting.Ambient = Color3.new(1, 4, 3)
-end
-})    
-Tab:AddButton({
-	Name = "乱搞2",
-	Callback = function()
-game.Lighting.Ambient = Color3.new(3, 1, 2)
-end
-})    
-
-Tab:AddButton({
-      Name = "乱搞3",
-      Callback = function()
-        game.Lighting.Ambient = Color3.new(4, 2, 1)
-      end
-    })
+Tab:AddTextbox({
+  Name = "HP设置(一般没用)",
+  Default = "",
+  TextDisappear = true,
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.Health = Value
+  end
+})
+local Tab = Window:MakeTab({
+    Name = "光影脚本",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
 local Section = Tab:AddSection({
   Name = "注:光影脚本，可叠加，效果都不一样"
@@ -459,6 +357,43 @@ Tab:AddButton({
   end
 })
 wait(0.1)
+local Tab = Window:MakeTab({
+    Name = "其他亮度夜视",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+  Name = "其他夜视(一次只能用一个，会和正常夜视野冲突)"
+})
+
+Tab:AddButton({
+      Name = "恢复默认",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(0, 0, 0)
+      end
+    })
+
+Tab:AddButton({
+      Name = "亮度1",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(1, 1, 1)
+      end
+    })
+Tab:AddButton({
+      Name = "亮度2",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(2, 2, 2)
+      end
+    })
+
+Tab:AddButton({
+      Name = "亮度3",
+      Callback = function()
+        game.Lighting.Ambient = Color3.new(3, 3, 3)
+      end
+    })
+
 local Tab = Window:MakeTab({
     Name = "长途旅行",
 	Icon = "rbxassetid://4483345998",
