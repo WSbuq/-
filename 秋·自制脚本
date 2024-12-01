@@ -75,12 +75,6 @@ fpsLabel.Parent = fpsGui
 
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/WS857960/-/main/QJBDUI.txt'))()
 local Window = OrionLib:MakeWindow({Name = "秋·自制脚本", HidePremium = false, SaveConfig = true,IntroText ="秋·自制脚本", ConfigFolder = "好闲"})
-OrionLib:MakeNotification({
-  Name = "欢迎使用秋·自制脚本,作者QQ:539414413",
-  Content = "当前游戏ID为:" .. game.GameId .. " ",
-  Image = "rbxassetid://7734068321",
-  Time = 10
-})
 wait(0.1)
 local Tab = Window:MakeTab({
   Name = "首页",
@@ -257,9 +251,9 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-  Name = "飞车(在主驾驶位才能用，可以带别人飞)(部分服务器可用)",
+  Name = "飞车(注:多人在同一个载具上得在主驾驶位才能用，可以带别人飞，脚本不是我的，源码被加密了，我翻译不了)",
   Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/1111/refs/heads/main/%E9%A3%9E%E8%BD%A6"))()
   end
 })
 
@@ -1354,4 +1348,10 @@ Tab:AddButton({
   Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
   end
+})
+OrionLib:MakeNotification({
+  Name = "秋·自制脚本加载完成,作者QQ:539414413",
+  Content = "当前游戏ID为:" .. game.GameId .. " ",
+  Image = "rbxassetid://7734068321",
+  Time = 10
 })
