@@ -112,6 +112,13 @@ Tab:AddButton({
   end
 })
 Tab:AddParagraph("飞车-注:多人在同一个载具上得在主驾驶位才能用，可以带别人飞，","脚本不是我的，源码被加密了，我翻译不了")
+
+Tab:AddButton({
+      Name = "透视菜单(秋风拂过翻译)",
+      Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/%E9%80%8F%E8%A7%86%E8%8F%9C%E5%8D%95"))()
+      end
+    })
 Tab:AddButton({
   Name = "旋转菜单(启动后可以穿墙，如果只想穿墙就把速度调成0)(秋风拂过汉化)",
   Callback = function()
@@ -1190,6 +1197,21 @@ Tab:AddButton({
 
   end
 })
+
+Tab:AddButton({
+      Name = "皮脚本",
+      Callback = function()
+        getgenv().XiaoPi="皮脚本QQ群1002100032" loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
+      end
+    })
+Tab:AddButton({
+  Name = "复制该脚本群号",
+  Callback = function()
+    setclipboard("1002100032")
+
+  end
+})
+
 Tab:AddButton({
       Name = "白脚本(要找作者买白名单)(他有10r和20r的，10r的已经不更新了)",
       Callback = function()
