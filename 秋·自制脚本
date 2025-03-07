@@ -413,7 +413,7 @@ end
 Tab:AddButton({
       Name = "LHUB",
       Callback = function()
-         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-JonBet-Universal-31048"))()
+         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-LHUB-31007"))()
       end
     })
 Tab:AddButton({
