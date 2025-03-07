@@ -405,14 +405,19 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-      Name = "长途旅行1",
+      Name = "夜行中心",
       Callback = function()
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/xxqLgnd/Utilities/main/DustyTrip",true))()
+end
+    })
+Tab:AddButton({
+      Name = "LHUB",
+      Callback = function()
+         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-JonBet-Universal-31048"))()
       end
     })
-
 Tab:AddButton({
-      Name = "长途旅行2",
+      Name = "忘记叫啥了",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/FlexSniper",true))()
       end
