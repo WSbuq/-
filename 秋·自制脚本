@@ -26,18 +26,10 @@ CoreGui:SetCore("SendNotification", {
   Duration = 0.1,
 })
 wait(0)
-print("Anti Afk On")
-local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-  vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-  wait(1)
-  vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
-wait(0)
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "反挂机已自动开启",
-  Text = "被踢出服务器的概率已降低",
+  Title = "如有需要请手动开启afk",
+  Text = "部分服务器会检测",
   Duration = 5,
 })
 wait(0.1)
@@ -71,14 +63,20 @@ Tab:AddParagraph("你好"..game.Players.LocalPlayer.Name..",欢迎使用秋·自
 Tab:AddParagraph("您的用户名:"," "..game.Players.LocalPlayer.Name.."")
 Tab:AddParagraph("您的注入器:"," "..identifyexecutor().."")
 Tab:AddParagraph("您当前服务器的ID"," "..game.GameId.."")
-Tab:AddParagraph("反挂机已启动","")
+Tab:AddParagraph("部分服务器会检测反挂机(afk)，请确认不会检测后再使用","如 橡树地 等")
 Tab:AddButton({
-  Name = "反挂机2",
-  Callback = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/9fFu43FF"))()
-  end
-})
-
+      Name = "afk",
+      Callback = function()
+print("Anti Afk On")
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+  vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+  wait(1)
+  vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+      end
+    })
+  
 Tab:AddButton({
   Name = "复制作者QQ号",
   Callback = function()
@@ -284,10 +282,20 @@ Heartbeat:Connect(HeartbeatUpdate)
       end
     })
 local Tab = Window:MakeTab({
-  Name = "基础数值修改",
+  Name = "基础数值修改(慎用)",
   Icon = "rbxassetid://4483345998",
   PremiumOnly = false
 })
+
+Tab:AddParagraph("这是最容易被检测的功能，请不要随意使用","橡树地，巴掌模拟器等均会永封")
+Tab:AddParagraph("防误触","    ")
+Tab:AddParagraph("      ","    ")
+Tab:AddParagraph("      ","    ")
+Tab:AddParagraph("      ","    ")
+Tab:AddParagraph("      ","    ")
+Tab:AddParagraph("      ","    ")
+Tab:AddParagraph("      ","    ")
+Tab:AddParagraph("      ","    ")
 Tab:AddTextbox({
   Name = "移动速度",
   Default = "",
