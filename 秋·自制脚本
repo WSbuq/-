@@ -560,22 +560,33 @@ Tab:AddButton({
     loadstring(game:HttpGet("https://pastebin.com/raw/07P53fFE"))()
   end
 })
-  local Section = Tab:AddSection({
-  Name = "随便乱找的，不确定能不能用"
-  })
-  
-  Tab:AddButton({
-  Name = "最强doors",
-  Callback = function()
-    loadstring(game:HttpGet(('https://pastebin.com/raw/R8QMbhzv')))()
-  end
+  local Tab = Window:MakeTab({
+    Name = "死铁轨",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+  Name = "提示:死铁轨检测较强,如要使用后果自负"
 })
 Tab:AddButton({
-  Name = "不可能模式",
-  Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Ukazix/impossible-mode/main/Protected_79.lua.txt'))()
-  end
-})
+      Name = "死铁轨速通脚本（可传送到终点断桥，自动打断桥处的怪）",
+      Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-Auto-end-thing-34919"))()
+      end
+    })
+Tab:AddButton({
+      Name = "死铁轨多功能",
+      Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-Tp-to-End-Kill-Aura-Refuel-Anywhere-Auto-Heal-and-more-34738"))()
+      end
+    })
+Tab:AddButton({
+      Name = "死铁轨辅助脚本",
+      Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/SansHubScript/refs/heads/main/SansHub"))()
+      end
+    })
+
 wait(0.1)
 local Tab = Window:MakeTab({
   Name = "巴掌模拟器",
