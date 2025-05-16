@@ -588,13 +588,13 @@ Tab:AddButton({
       end
     })
 Tab:AddButton({
-	Name = "多功能2",
+	Name = "NullFire(多功能)",
 	Callback = function()
 loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-NullFire-32921"))()
 end
 })    
 Tab:AddButton({
-      Name = "死铁轨辅助脚本",
+      Name = "SansHuB",
       Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/SansHubScript/refs/heads/main/SansHub"))()
       end
