@@ -569,9 +569,16 @@ local Section = Tab:AddSection({
   Name = "提示:死铁轨检测较强,如要使用后果自负"
 })
 Tab:AddButton({
-      Name = "死铁轨速通脚本（可传送到终点断桥，自动打断桥处的怪）",
+      Name = "死铁轨速通脚本（可传送到终点断桥，自动打怪(必须用枪)）",
       Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-Auto-end-thing-34919"))()
+      end
+    })
+
+Tab:AddButton({
+      Name = "NATHUB(速刷票卷和自动通关)",
+      Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-NATHUB-OP-SCRIPT-AUTO-BONDS-DEAD-RAILS-39929"))()
       end
     })
 Tab:AddButton({
