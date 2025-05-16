@@ -581,12 +581,7 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-NATHUB-OP-SCRIPT-AUTO-BONDS-DEAD-RAILS-39929"))()
       end
     })
-Tab:AddButton({
-      Name = "死铁轨多功能",
-      Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-Tp-to-End-Kill-Aura-Refuel-Anywhere-Auto-Heal-and-more-34738"))()
-      end
-    })
+
 Tab:AddButton({
 	Name = "NullFire(多功能)",
 	Callback = function()
