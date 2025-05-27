@@ -578,8 +578,8 @@ Tab:AddButton({
 Tab:AddButton({
       Name = "NATHUB(速刷票卷和自动通关)",
       Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-NATHUB-OP-SCRIPT-AUTO-BONDS-DEAD-RAILS-39929"))()
-      end
+loadstring(game:HttpGet("https://get.nathub.xyz/loader"))();
+         end
     })
 
 Tab:AddButton({
