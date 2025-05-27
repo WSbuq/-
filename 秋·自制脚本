@@ -577,8 +577,8 @@ Tab:AddButton({
 Tab:AddButton({
       Name = "native(红叶子，最好用的死铁轨脚本，基本啥都有)",
       Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-dead-rails-native-hub-39893"))()
-      end
+(loadstring or load)(game:HttpGet("https://getnative.cc/script/loader"))()
+             end
     })
 Tab:AddButton({
       Name = "NATHUB(速刷票卷和自动通关)",
