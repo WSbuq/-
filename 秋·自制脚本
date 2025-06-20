@@ -405,6 +405,18 @@ Tab:AddButton({
         game.Lighting.Ambient = Color3.new(3, 3, 3)
       end
     })
+local Tab = Window:MakeTab({
+    Name = "蜂群模拟器",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+      Name = "Kron",
+      Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Bee-Swarm-Simulator-Kron-Hub-20936"))()
+      end
+    })
 
 local Tab = Window:MakeTab({
     Name = "长途旅行",
