@@ -61,7 +61,7 @@ while wait() do
         for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                 repeat wait(.001)           
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
-                        v.HumanoidRootPart.CFrame * CFrame.new(math.random(-1,-1), -0.5,math.random(-1,1))
+                        v.HumanoidRootPart.CFrame * CFrame.new(0, -0.5,math.random(2,2))
                                             ----------武器部分
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/AAAWeapons%20wholesale"))()
                     ------------------------------------------
