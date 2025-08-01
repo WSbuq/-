@@ -1,0 +1,8 @@
+game.Players.LocalPlayer.Backpack["Infinity Gauntlet"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Surturs Sword"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Blitz"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Cosmi-Rod"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Hadron"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["The Casket"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["StormBreaker"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Mjolnir"].Parent = game.Players.LocalPlayer.Character
