@@ -4,7 +4,7 @@ CoreGui:SetCore("SendNotification", {
   Text = "如果没有所有免费武器将无法正常使用",
   Duration = 1,
 })
-local godmode = ture--是否开启无敌，ture为开,false为关
+local godmode = false--是否开启无敌，ture为开,false为关
 
 --------
 local executecheck = nil if executecheck == true then return print("Already Executed")end
