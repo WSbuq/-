@@ -6,3 +6,4 @@ game.Players.LocalPlayer.Backpack["Hadron"].Parent = game.Players.LocalPlayer.Ch
 game.Players.LocalPlayer.Backpack["The Casket"].Parent = game.Players.LocalPlayer.Character
 game.Players.LocalPlayer.Backpack["StormBreaker"].Parent = game.Players.LocalPlayer.Character
 game.Players.LocalPlayer.Backpack["Mjolnir"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Power Stone"].Parent = game.Players.LocalPlayer.Character ---力量宝石扩展
