@@ -52,7 +52,7 @@ game.Players.LocalPlayer.Backpack["Mjolnir"].Parent = game.Players.LocalPlayer.C
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "进程A",
-  Text = "完成(如果不想死亡请开启手套的护盾)",
+  Text = "完成(如果不想死亡请开启手套的护盾,搭配连点器以达到最大效率)",
   Duration = 0.1,
 })
 while wait() do
@@ -63,7 +63,14 @@ while wait() do
                         v.HumanoidRootPart.CFrame * CFrame.new(1, 0,math.random(-2,2))
                 until (v:FindFirstChildWhichIsA("Humanoid").Health <= 0 or false)
                     ----------武器部分
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/AAAWeapons%20wholesale"))()
+                    game.Players.LocalPlayer.Backpack["Infinity Gauntlet"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Surturs Sword"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Blitz"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Cosmi-Rod"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Hadron"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["The Casket"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["StormBreaker"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Mjolnir"].Parent = game.Players.LocalPlayer.Character
                     ------------------------------------------
             end
     end)
