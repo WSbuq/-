@@ -1,10 +1,10 @@
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "注：全免费武器版",
+  Title = "注：全武器版",
   Text = "如果没有所有免费武器将无法正常使用",
   Duration = 1,
 })
-local godmode = false--是否开启无敌，ture为开,false为关
+local godmode = fal--是否开启无敌，ture为开,false为关
 
 --------
 local executecheck = nil if executecheck == true then return print("Already Executed")end
@@ -49,10 +49,11 @@ game.Players.LocalPlayer.Backpack["Hadron"].Parent = game.Players.LocalPlayer.Ch
 game.Players.LocalPlayer.Backpack["The Casket"].Parent = game.Players.LocalPlayer.Character
 game.Players.LocalPlayer.Backpack["StormBreaker"].Parent = game.Players.LocalPlayer.Character
 game.Players.LocalPlayer.Backpack["Mjolnir"].Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack["Power Stone"].Parent = game.Players.LocalPlayer.Character ---力量宝石扩展
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "进程A",
-  Text = "完成(如果不想死亡请开启手套的护盾,搭配连点器以达到最大效率)",
+  Text = "完成(如果不想死亡请开启手套的护盾)",
   Duration = 0.1,
 })
 while wait() do
@@ -60,23 +61,13 @@ while wait() do
         for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                 repeat wait(.05)           
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
-                        v.HumanoidRootPart.CFrame * CFrame.new(1, 0,math.random(-2,2))
-game.Players.LocalPlayer.Character["Surturs Sword"]:Activate()
-                    game.Players.LocalPlayer.Character["Infinity Gauntlet"]:Activate()
-                    game.Players.LocalPlayer.Character["Blitz"]:Activate()
-                    game.Players.LocalPlayer.Character["Cosmi-Rod"]:Activate()
-                    game.Players.LocalPlayer.Character["Hadron"]:Activate()
-                    game.Players.LocalPlayer.Character["The Casket"]:Activate()
-                    game.Players.LocalPlayer.Character["StormBreaker"]:Activate()
-                    game.Players.LocalPlayer.Character["Mjolnir"]:Activate()
+                        v.HumanoidRootPart.CFrame * CFrame.new(math.random(2,2), -0.5,math.random(2,2))
+                                            ----------武器部分
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/AAAWeapons%20wholesale"))()
+                    ------------------------------------------
                 until (v:FindFirstChildWhichIsA("Humanoid").Health <= 0 or false)
-             end
+
+            end
     end)
-  local CoreGui = game:GetService("StarterGui")
-              CoreGui:SetCore("SendNotification", {
-              Title = "正常运行",
-              Text = "开始循环,死亡时停止",
-              Duration = 0.1,
-              })
 end
 --需要所有武器以运行
