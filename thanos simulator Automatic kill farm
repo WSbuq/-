@@ -59,7 +59,7 @@ CoreGui:SetCore("SendNotification", {
 while wait() do
   pcall(function()
         for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                repeat wait(.5)           
+                repeat wait(.001)           
                                             ----------武器部分
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/AAAWeapons%20wholesale"))()
                     ------------------------------------------
