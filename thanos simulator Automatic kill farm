@@ -1,14 +1,17 @@
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "注：全武器版",
-  Text = "如果没有所有免费武器将无法正常使用",
+  Text = "如果没有所有免费武器将无法正常使用，如有力量宝石也会使用",
   Duration = 1,
 })
-local godmode = false--是否开启无敌，ture为开,false为关
-
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+  Title = "退出以关闭",
+  Text = "",
+  Duration = 0.1,
+})
 --------
 local executecheck = nil if executecheck == true then return print("Already Executed")end
---------
 game.Players.LocalPlayer.Character:BreakJoints()
 game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
       game.Players.LocalPlayer.CharacterAdded:Connect(function()
@@ -16,56 +19,37 @@ game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
                 if v:IsA("ClickDetector") then
                     fireclickdetector(v)
                     executecheck = true
+                    local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+  Title = "正在重生",
+  Text = "开始重新拿起物品",
+  Duration = 3,
+})
+                    wait(3)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/Use%20of%20free%20weapons"))()
+local executecheck = nil 
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+  Title = "物品已重新拿起",
+  Text = "完成(如果不想死亡请开启手套的护盾)",
+  Duration = 3,
+})
                 end
             end
         end)
 end)
-wait(10)
-if godmode == true then
-local speaker = game.Players.LocalPlayer
-local Cam = workspace.CurrentCamera
-local Pos, Char = Cam.CFrame, game.Players.LocalPlayer.Character
-local Human = Char:FindFirstChildWhichIsA("Humanoid")
-local nHuman = Human:Clone()
-nHuman.Parent, speaker.Character = Char, nil
-nHuman.SetStateEnabled(nHuman, 15, false)
-nHuman.SetStateEnabled(nHuman, 1, false)
-nHuman.SetStateEnabled(nHuman, 0, false)
-nHuman.BreakJointsOnDeath, Human = true, Human:Destroy()
-speaker.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
-nHuman.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
-local Script = Char:FindFirstChild("Animate")
-nHuman.Health = nHuman.MaxHealth
-Char.Animate.Disabled = true
-wait(.01)
-Char.Animate.Disabled = false
-wait(3)
-end
-game.Players.LocalPlayer.Backpack["Infinity Gauntlet"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Surturs Sword"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Blitz"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Cosmi-Rod"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Hadron"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["The Casket"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["StormBreaker"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Mjolnir"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Power Stone"].Parent = game.Players.LocalPlayer.Character ---力量宝石扩展
-local CoreGui = game:GetService("StarterGui")
-CoreGui:SetCore("SendNotification", {
-  Title = "进程A",
-  Text = "完成(如果不想死亡请开启手套的护盾)",
-  Duration = 0.1,
-})
-while wait() do
+
+while wait(3) do
   pcall(function()
         for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                 repeat wait(.001)           
-                                            ----------武器部分
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/AAAWeapons%20wholesale"))()
-                    ------------------------------------------
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
                         v.HumanoidRootPart.CFrame * CFrame.new(0, -0.5,math.random(0.5,-0.5))
+                                                                    ----------武器部分
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/AAAWeapons%20wholesale"))()
+                    ------------------------------------------
                 until (v:FindFirstChildWhichIsA("Humanoid").Health <= 0 or false)
+              
 
             end
     end)
