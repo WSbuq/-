@@ -61,18 +61,16 @@ while wait() do
                 repeat wait(.05)           
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
                         v.HumanoidRootPart.CFrame * CFrame.new(1, 0,math.random(-2,2))
+game.Players.LocalPlayer.Character["Surturs Sword"]:Activate()
+                    game.Players.LocalPlayer.Character["Infinity Gauntlet"]:Activate()
+                    game.Players.LocalPlayer.Character["Blitz"]:Activate()
+                    game.Players.LocalPlayer.Character["Cosmi-Rod"]:Activate()
+                    game.Players.LocalPlayer.Character["Hadron"]:Activate()
+                    game.Players.LocalPlayer.Character["The Casket"]:Activate()
+                    game.Players.LocalPlayer.Character["StormBreaker"]:Activate()
+                    game.Players.LocalPlayer.Character["Mjolnir"]:Activate()
                 until (v:FindFirstChildWhichIsA("Humanoid").Health <= 0 or false)
-                    ----------武器部分
-                    game.Players.LocalPlayer.Backpack["Infinity Gauntlet"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Surturs Sword"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Blitz"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Cosmi-Rod"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Hadron"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["The Casket"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["StormBreaker"].Parent = game.Players.LocalPlayer.Character
-game.Players.LocalPlayer.Backpack["Mjolnir"].Parent = game.Players.LocalPlayer.Character
-                    ------------------------------------------
-            end
+             end
     end)
   local CoreGui = game:GetService("StarterGui")
               CoreGui:SetCore("SendNotification", {
