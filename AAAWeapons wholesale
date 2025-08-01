@@ -1,5 +1,7 @@
                     game.Players.LocalPlayer.Character["Surturs Sword"]:Activate()
+wait()
                     game.Players.LocalPlayer.Character["Infinity Gauntlet"]:Activate()
+wait()
                     game.Players.LocalPlayer.Character["Blitz"]:Activate()
                     game.Players.LocalPlayer.Character["Cosmi-Rod"]:Activate()
                     game.Players.LocalPlayer.Character["Hadron"]:Activate()
