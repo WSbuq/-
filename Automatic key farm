@@ -28,7 +28,6 @@ CoreGui:SetCore("SendNotification", {
   Duration = 1,
 })
      end
-   wait(1)
     end
    end)
 until (nil)
