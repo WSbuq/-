@@ -1,0 +1,21 @@
+repeat wait(1)
+  local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+  Title = "寻找中",
+  Text = "正在检测钥匙",
+  Duration = 0.1,
+})
+pcall(function()for I, v in pairs(game:GetService("Workspace").Key:GetDescendants()) do
+if v:IsA("ClickDetector") then
+fireclickdetector(v)
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+  Title = "寻找成功",
+  Text = "已拾取",
+  Duration = 1,
+})
+     end
+   wait(1)
+    end
+   end)
+until (nil)
