@@ -685,6 +685,18 @@ local Tab = Window:MakeTab({
   PremiumOnly = false
 })
 Tab:AddButton({
+      Name = "自动杀戮农场",
+      Callback = function()
+        getgenv().robloxthanossimulator="自动杀戮农场" loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/thanos%20simulator%20Automatic%20kill%20farm"))()
+      end
+    })
+Tab:AddButton({
+      Name = "自动钥匙农场(在硬核模式使用)",
+      Callback = function()
+        getgenv().robloxthanossimulator="自动钥匙农场" loadstring(game:HttpGet("https://raw.githubusercontent.com/WSbuq/-/refs/heads/main/Automatic%20key%20farm"))()
+      end
+    })
+Tab:AddButton({
   Name = "出生/复活的地方",
   Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,153,-20)
