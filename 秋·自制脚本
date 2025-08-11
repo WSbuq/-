@@ -698,39 +698,6 @@ Tab:AddButton({
     })
 
 Tab:AddButton({
-	Name = "测试",
-	Callback = function()
---钥匙的文件路径为 workspace.Key.ClickDetector ,这是本脚本的核心
---[[AutomaticFarm 和 YouGetKey为全局变量，可更改
-print 为在控制台打印，可删除]]
-if AutomaticFarm == nil then
-  local AutomaticFarm = false
-  print("自动农场状态已初始化")
-  end
-if FirstWorking == nil then
-  FirstWorking = true
-  print("启动状态已初始化")
-  end
-if YouGetKey == nil then
- local YouGetKey = 0
-  print("钥匙数量已初始化")
-  end
-
-  if AutomaticFarm then
-    AutomaticFarm = false
-    print("暂停")
-  else
-    AutomaticFarm = true
-      if FirstWorking == true then
-      FirstWorking = false
-      print("正在启动")
-      else
-      print("继续启动")
-      end
-    end
-end
-})    
-Tab:AddButton({
   Name = "出生/复活的地方",
   Callback = function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,153,-20)
