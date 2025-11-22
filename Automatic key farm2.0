@@ -1,4 +1,9 @@
----[[钥匙的文件路径为 workspace.Key , 收集是它的子文件 ClickDetector ]]
+--[[
+     钥匙 workspace.Key.ClickDetector 
+   停电箱workspace["Blackout Case"].ClickDetector
+   纳米箱workspace["Nano Case"].ClickDetector 
+   星云箱workspace["Nebulaic Case"].ClickDetector 
+                                                                           ]]
 ----------反挂机
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
@@ -21,7 +26,7 @@ CoreGui:SetCore("SendNotification", {
 })
 wait(0.1)
  key = 0 
- x=0
+ keyx=0
  
  
  repeat wait()
@@ -33,9 +38,9 @@ CoreGui:SetCore("SendNotification", {
   Duration = 0.1,
 })
 wait(0.5)
-x = 0
-pcall(function()for I,k in pairs(game:GetService("workspace")()) do
-    if k == ("Key") then
+keyx = 0
+pcall(function()for I,k in pairs(game:GetService("workspace"):GetDescendants()) do
+    if k:IsA("Key") then
 fireclickdetector(workspace.Key.ClickDetector)
 
 local CoreGui = game:GetService("StarterGui")
@@ -45,18 +50,18 @@ CoreGui:SetCore("SendNotification", {
   Duration = 0.1,
 })
 key = key+1
-x = 1
+keyx = 1
 wait(0.5)
 print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发现一把钥匙")
      end
       end
       end)
-    until (x == 0)
+    until (keyx == 0)
   
   local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "未发现钥匙",
-  Text = "大约每小时会刷新一把",
+  Text = "不同地图刷新时间不同",
   Duration = 0.1,
 })
 wait(0.5)
