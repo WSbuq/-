@@ -7,7 +7,7 @@
 ----------反挂机
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "欢迎使用自动钥匙农场2.0",
+  Title = "欢迎使用自动物品农场",
   Text = "by秋风拂过",
   Duration = 1,
 })
