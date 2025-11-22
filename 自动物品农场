@@ -7,7 +7,7 @@
 ----------反挂机
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "欢迎使用自动物品农场",
+  Title = "欢迎使用自动钥匙农场2.0",
   Text = "by秋风拂过",
   Duration = 1,
 })
@@ -36,14 +36,14 @@ wait(2)
 repeat wait(0.5)
   local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "正在寻找物品(发现后会在控制台记录)",
-  Text = "已发现钥匙:"..key.."已发现停电箱:"..Blackout_Case,
-  Duration = 1,
+  Title = "正在寻找物品",
+  Text = "发现后会在控制台记录",
+  Duration = 6,
 })
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "已发现纳米箱:"..Nano_Case,
-  Text = "已发现星云箱:"..Nebulaic_Case,
+  Title = "已发现钥匙:"..key.."已发现停电箱:"..Blackout_Case,
+  Text = "已发现纳米箱:"..Nano_Case.."已发现星云箱:"..Nebulaic_Case,
   Duration = 1,
 })
 wait(2.5)
