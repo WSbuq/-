@@ -2,7 +2,7 @@
      钥匙 workspace.Key.ClickDetector 
    停电箱workspace["Blackout Case"].ClickDetector
    纳米箱workspace["Nano Case"].ClickDetector 
-   星云箱workspace["Nebulaic Case"].ClickDetector 
+   星云箱workspace.NebulaicCase.ClickDetector 
                                                                            ]]
 ----------反挂机
 local CoreGui = game:GetService("StarterGui")
@@ -26,7 +26,7 @@ CoreGui:SetCore("SendNotification", {
 })
 wait(2)
  v = 0
- key = 0 
+ key_a = 0 
  Blackout_Case = 0
  Nano_Case = 0
  Nebulaic_Case = 0
@@ -42,7 +42,7 @@ CoreGui:SetCore("SendNotification", {
 })
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "已发现钥匙:"..key.."已发现停电箱:"..Blackout_Case,
+  Title = "已发现钥匙:"..key_a.."已发现停电箱:"..Blackout_Case,
   Text = "已发现纳米箱:"..Nano_Case.."已发现星云箱:"..Nebulaic_Case,
   Duration = 6.5,
 })
@@ -50,19 +50,19 @@ wait(2.5)
 
 
 v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace").key:GetDescendants()) do
-    if k:IsA("ClickDetector") then
-      fireclickdetector(k)
+  pcall(function()for I, a in pairs(game:GetService("workspace").Key:GetDescendants()) do
+    if a:IsA("ClickDetector") then
+      fireclickdetector(a)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现钥匙",
         Text = "已拾取",
         Duration = 0.1,
       })
-      key = key+1
+      key_a = key_a+1
       v = 1
     wait(0.5)
-print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发现一把钥匙,目前已发现"..key)
+print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发现一把钥匙,目前已发现"..key_a)
               end
            end
      end)
@@ -78,9 +78,9 @@ print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发�
    end
  wait(0.5)
  v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace")["Blackout Case"]:GetDescendants()) do
-    if k:IsA("ClickDetector") then
-      fireclickdetector(k)
+  pcall(function()for I, b in pairs(game:GetService("workspace")["Blackout Case"]:GetDescendants()) do
+    if b:IsA("ClickDetector") then
+      fireclickdetector(b)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现停电箱",
@@ -106,9 +106,9 @@ print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发�
    end
  wait(0.5)
  v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace")["Nano Case"]:GetDescendants()) do
-    if k:IsA("ClickDetector") then
-      fireclickdetector(k)
+  pcall(function()for I, c in pairs(game:GetService("workspace")["Nano Case"]:GetDescendants()) do
+    if c:IsA("ClickDetector") then
+      fireclickdetector(c)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现纳米箱",
@@ -134,9 +134,9 @@ print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发�
    end
  wait(0.5)
   v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace")["Nebulaic Case"]:GetDescendants()) do
-    if k:IsA("ClickDetector") then
-      fireclickdetector(k)
+  pcall(function()for I, d in pairs(game:GetService("workspace").NebulaicCase:GetDescendants()) do
+    if d:IsA("ClickDetector") then
+      fireclickdetector(d)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现星云箱",
