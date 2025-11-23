@@ -38,13 +38,13 @@ repeat wait(0.5)
 CoreGui:SetCore("SendNotification", {
   Title = "正在寻找物品",
   Text = "发现后会在控制台记录",
-  Duration = 6,
+  Duration = 6.5,
 })
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
   Title = "已发现钥匙:"..key.."已发现停电箱:"..Blackout_Case,
   Text = "已发现纳米箱:"..Nano_Case.."已发现星云箱:"..Nebulaic_Case,
-  Duration = 1,
+  Duration = 6.5,
 })
 wait(2.5)
 
