@@ -50,9 +50,9 @@ wait(2.5)
 
 
 v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace"):GetDescendants()) do
-    if k:IsA("Key") then
-      fireclickdetector(workspace.Key.ClickDetector)
+  pcall(function()for I,k in pairs(game:GetService("workspace").key:GetDescendants()) do
+    if k:IsA("ClickDetector") then
+      fireclickdetector(k)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现钥匙",
@@ -78,9 +78,9 @@ print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发�
    end
  wait(0.5)
  v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace"):GetDescendants()) do
-    if k:IsA("Blackout Case") then
-      fireclickdetector(workspace["Blackout Case"].ClickDetector)
+  pcall(function()for I,k in pairs(game:GetService("workspace")["Blackout Case"]:GetDescendants()) do
+    if k:IsA("ClickDetector") then
+      fireclickdetector(k)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现停电箱",
@@ -106,9 +106,9 @@ print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发�
    end
  wait(0.5)
  v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace"):GetDescendants()) do
-    if k:IsA("Nano Case") then
-      fireclickdetector(workspace["Nano Case"].ClickDetector)
+  pcall(function()for I,k in pairs(game:GetService("workspace")["Nano Case"]:GetDescendants()) do
+    if k:IsA("ClickDetector") then
+      fireclickdetector(k)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现纳米箱",
@@ -134,9 +134,9 @@ print("["..os.date("%H").."时"..os.date("%M").."分"..os.date("%S").. "秒]发�
    end
  wait(0.5)
   v=0
-  pcall(function()for I,k in pairs(game:GetService("workspace"):GetDescendants()) do
-    if k:IsA("Nebulaic Case") then
-      fireclickdetector(workspace["Nebulaic Case"].ClickDetector)
+  pcall(function()for I,k in pairs(game:GetService("workspace")["Nebulaic Case"]:GetDescendants()) do
+    if k:IsA("ClickDetector") then
+      fireclickdetector(k)
       local CoreGui = game:GetService("StarterGui")
         CoreGui:SetCore("SendNotification", {
         Title = "发现星云箱",
